@@ -1,0 +1,2 @@
+export { i18n, type Locale } from "./config";
+export { getDictionary, type Dictionary } from "./dictionaries";

@@ -1,0 +1,458 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "startProject": "Start a Project"
+  },
+  "hero": {
+    "badge": "Full-Stack Developer & Cybersecurity Enthusiast",
+    "headline1": "I Develop the",
+    "headline2": "Digital Future",
+    "headline3": "of Your Business.",
+    "subheadline": "I transform ideas into innovative, secure, and high-performance web experiences. I help businesses grow with captivating design and solid technical architecture.",
+    "ctaPrimary": "My Projects",
+    "ctaSecondary": "Contact Me",
+    "stats": {
+      "projects": "Projects Delivered",
+      "satisfaction": "Client Satisfaction",
+      "experience": "Years Experience",
+      "response": "Response Time"
+    },
+    "scroll": "Scroll"
+  },
+  "about": {
+    "label": "About Me",
+    "title": "Creativity & Security",
+    "profileAlt": "Profile photo",
+    "description": "I'm a Full-Stack Developer with a passion for cybersecurity. Currently specializing in Cybersecurity at Fondazione ITS Academy Adriano Olivetti, I blend design creativity with technical rigor. For 3 years I've been writing code to create solutions that are not only beautiful but also robust and scalable.",
+    "cards": {
+      "approach": {
+        "title": "Solutions-First Approach",
+        "description": "Every project starts with understanding your unique challenges. I focus on delivering tangible results that drive your business forward."
+      },
+      "learning": {
+        "title": "Continuous Learning",
+        "description": "Technology evolves rapidly. I stay at the forefront, constantly exploring new tools and methodologies to bring you the best solutions."
+      },
+      "quality": {
+        "title": "Quality Obsessed",
+        "description": "From clean code to pixel-perfect designs, I maintain the highest standards in every aspect of development."
+      }
+    },
+    "techStack": "Tech Stack",
+    "techCategories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "tools": "Tools"
+    }
+  },
+  "services": {
+    "label": "Services",
+    "title": "What I Can Do For You",
+    "description": "Comprehensive web development services designed to elevate your digital presence and drive business growth.",
+    "items": {
+      "webDev": {
+        "title": "Web & App Development",
+        "description": "Modern websites, high-converting Landing Pages, and complex Web Applications (SaaS) built to measure.",
+        "features": ["Modern Websites", "Landing Pages", "SaaS Applications", "E-commerce Platforms"]
+      },
+      "design": {
+        "title": "UI/UX & Design",
+        "description": "Intuitive and captivating interfaces that guide users and strengthen brand identity.",
+        "features": ["Responsive Design", "UI/UX Prototyping", "Brand Identity", "Fluid Animations"]
+      },
+      "security": {
+        "title": "Security & Performance",
+        "description": "Code optimized for speed and security best-practices to protect your users' data.",
+        "features": ["Core Web Vitals Optimization", "Security Best Practices", "Data Protection", "CDN & Caching"]
+      }
+    },
+    "cta": {
+      "question": "Have a unique project in mind?",
+      "link": "Let's discuss your requirements"
+    },
+    "learnMore": "Learn More"
+  },
+  "projects": {
+    "label": "Portfolio",
+    "title": "My Projects",
+    "description": "A selection of my most recent work. Each project is an opportunity to push beyond and create something unique.",
+    "viewProject": "View Project",
+    "viewCode": "Code",
+    "backToPortfolio": "Back to Portfolio",
+    "demoNote": "This is a demo project that demonstrates LLM integration in web applications.",
+    "filters": {
+      "all": "All",
+      "liveDemo": "Live Demo",
+      "openSource": "Open Source",
+      "inDevelopment": "In Development"
+    },
+    "cta": {
+      "title": "Have a project in mind?",
+      "description": "Let's transform your idea into reality together. Contact me for a free consultation.",
+      "button": "Start a Project"
+    },
+    "items": {
+      "copycraft": {
+        "title": "CopyCraft AI",
+        "description": "Smart social content generator. Create captions and hashtags in seconds using Google Gemini.",
+        "tags": ["Next.js", "Gemini API", "Server Actions"]
+      },
+      "menutranslator": {
+        "title": "MenuTranslator",
+        "description": "Horeca tool: translates menus while keeping original dish names and explaining ingredients.",
+        "tags": ["Next.js", "AI", "i18n"]
+      },
+      "secureguard": {
+        "title": "SecureGuard Audit",
+        "description": "Python script suite for automated web vulnerability analysis (OWASP Top 10).",
+        "tags": ["Python", "Cybersecurity", "Bash"]
+      },
+      "nexuscommerce": {
+        "title": "Nexus Commerce v2",
+        "description": "Scalable e-commerce platform with microservices architecture and secure payments.",
+        "tags": ["React", "Node.js", "Stripe"]
+      }
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Ready to Bring Your Idea to Life?",
+    "description": "Let's discuss your project and explore how we can create something exceptional together.",
+    "conversation": {
+      "title": "Let's Start a Conversation",
+      "description": "Whether you have a specific project in mind or just want to explore possibilities, I'm here to help. Fill out the form and I'll get back to you within 24 hours."
+    },
+    "info": {
+      "email": "Email",
+      "responseTime": "Response Time",
+      "responseValue": "Usually within 24 hours"
+    },
+    "expect": {
+      "title": "What to Expect",
+      "items": ["Free initial consultation", "Detailed project proposal", "Transparent pricing", "Flexible communication"]
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "projectType": "Project Type",
+      "projectTypePlaceholder": "Select project type",
+      "message": "Message",
+      "messagePlaceholder": "Tell me about your project...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "privacy": "By submitting, you agree to our privacy policy."
+    },
+    "projectTypes": {
+      "website": "Website Development",
+      "webapp": "Web Application",
+      "ecommerce": "E-commerce Platform",
+      "optimization": "Performance Optimization",
+      "consulting": "Technical Consulting",
+      "other": "Other"
+    },
+    "success": {
+      "title": "Message Sent!",
+      "description": "Thank you for reaching out. I'll get back to you within 24 hours.",
+      "button": "Send Another Message"
+    },
+    "errors": {
+      "nameMin": "Name must be at least 2 characters",
+      "emailInvalid": "Please enter a valid email address",
+      "projectTypeRequired": "Please select a project type",
+      "messageMin": "Message must be at least 10 characters"
+    }
+  },
+  "footer": {
+    "description": "I develop the digital future of your business. Full-Stack Developer with focus on security, performance, and innovative design.",
+    "navigation": "Navigation",
+    "services": "Services",
+    "webDevelopment": "Web & App Development",
+    "designServices": "UI/UX & Design",
+    "securityServices": "Security & Performance",
+    "consulting": "Consulting",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "highlights": {
+    "badge": "Explore",
+    "title": "What I Can Offer",
+    "subtitle": "Navigate through the sections to discover who I am, what I do, and how we can work together.",
+    "learnMore": "Learn more",
+    "about": {
+      "title": "About Me",
+      "description": "Discover my story, technical skills, and the journey that led me to become a specialized web developer."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Explore my portfolio: AI applications, e-commerce, security systems, and much more."
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "Have a project in mind? Let's talk! I'm always open to new collaborations."
+    },
+    "featured": {
+      "badge": "Featured Project",
+      "title": "CopyCraft AI",
+      "description": "Advanced AI-powered marketing copy generator. Create persuasive content in seconds.",
+      "cta": "View Demo"
+    }
+  },
+  "coreValues": {
+    "security": {
+      "title": "Security First",
+      "description": "'Secure by Design' approach to protect your data."
+    },
+    "performance": {
+      "title": "Performance",
+      "description": "Ultra-fast sites optimized for Core Web Vitals."
+    },
+    "custom": {
+      "title": "Custom Made",
+      "description": "No pre-made templates. Tailor-made design for your brand."
+    }
+  },
+  "demos": {
+    "copycraft": {
+      "poweredBy": "Powered by Google Gemini",
+      "tagline": "Your personal Social Media Manager. Generate engaging content in seconds.",
+      "topicLabel": "What do you want to talk about today?",
+      "topicPlaceholder": "E.g.: New summer menu, Black Friday discounts, Product launch...",
+      "toneLabel": "Message tone",
+      "tonePlaceholder": "Select tone",
+      "platformLabel": "Platform",
+      "platformPlaceholder": "Select platform",
+      "tones": {
+        "fun": "😄 Fun",
+        "funDesc": "Light and engaging",
+        "professional": "💼 Professional",
+        "professionalDesc": "Authoritative and formal",
+        "urgent": "🔥 Urgent",
+        "urgentDesc": "Creates sense of scarcity"
+      },
+      "generateButton": "Generate Content",
+      "generating": "Generating...",
+      "generatedContent": "Generated Content",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "errorEmpty": "Enter a topic for the post",
+      "errorGeneric": "Generation error"
+    },
+    "menutranslator": {
+      "tagline": "Translate your menu while maintaining Italian identity. Perfect for restaurants welcoming international guests.",
+      "menuLabel": "Paste your Italian menu",
+      "menuPlaceholder": "Paste your menu here (e.g. Spaghetti alla Carbonara: eggs, guanciale, pecorino...)",
+      "menuHint": "Enter dishes with their descriptions. Italian names will be kept in the translation.",
+      "useExample": "Use example",
+      "translateButton": "Translate Menu 🌍",
+      "translating": "Translating...",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "errorMinLength": "Enter at least 10 characters of your menu",
+      "errorGeneric": "Translation error",
+      "features": {
+        "identity": {
+          "title": "Identity Preserved",
+          "description": "Original dish names remain in Italian"
+        },
+        "languages": {
+          "title": "3 Simultaneous Languages",
+          "description": "English, French and Chinese in one click"
+        },
+        "speed": {
+          "title": "Fast & Accurate",
+          "description": "Professional translations in seconds"
+        }
+      }
+    }
+  },
+  "timeline": {
+    "badge": "My Journey",
+    "title": "The Story Behind the",
+    "titleHighlight": "Code",
+    "subtitle": "Every developer has a story. Here's mine: a journey from curiosity to profession.",
+    "cta": {
+      "question": "And the next chapter?",
+      "answer": "We could write it together."
+    },
+    "milestones": {
+      "origins": {
+        "phase": "The Origins",
+        "title": "From Gaming to Code",
+        "description": "It all started with curiosity. The passion for video games soon transformed into a desire to understand 'how things work'. The first lines of code were written for pure fun, igniting a spark that never went out."
+      },
+      "dualPath": {
+        "phase": "The Dual Path",
+        "title": "Digital Humanist",
+        "description": "While attending the Linguistic High School, I was simultaneously cultivating the study of computer science as a self-taught learner. This hybrid education taught me that code is, first and foremost, a language for communicating and solving problems."
+      },
+      "choice": {
+        "phase": "The Choice",
+        "title": "The Leap into Cybersecurity",
+        "description": "After graduation, I decided to turn my passion into a profession by enrolling at Fondazione ITS Academy Adriano Olivetti. Here I understood that it's not enough to build: you must protect. I combined Full-Stack development with the defensive mindset of Security."
+      },
+      "nexus": {
+        "phase": "Nexus",
+        "title": "The Nexus Mission",
+        "description": "Today I put my skills at the service of small and medium-sized businesses. My goal is not just to create websites, but to provide secure digital tools that allow local businesses to grow and compete in the global market."
+      }
+    }
+  },
+  "privacy": {
+    "backToHome": "Back to Home",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated",
+    "sections": {
+      "controller": {
+        "title": "1. Data Controller",
+        "content": "The Data Controller is Nexus (hereinafter \"Controller\" or \"NEXUS.dev\"), reachable through the contact form on the site or at the email address indicated in the Contact section."
+      },
+      "dataTypes": {
+        "title": "2. Types of Data Collected",
+        "intro": "The personal data collected through this website are exclusively those voluntarily provided by the user through the Contact Form:",
+        "items": {
+          "name": "Name – to identify the sender",
+          "email": "Email Address – to respond to the request",
+          "projectType": "Project Type – to understand the nature of the request",
+          "message": "Message – content of the communication"
+        }
+      },
+      "purpose": {
+        "title": "3. Purpose of Processing",
+        "intro": "Personal data collected are used exclusively for:",
+        "items": [
+          "Responding to information requests sent through the contact form",
+          "Providing requested quotes or consultations",
+          "Managing any professional relationships arising from initial contact"
+        ],
+        "noMarketing": "No newsletters, marketing or promotional communications are sent unless separate explicit consent is given."
+      },
+      "legalBasis": {
+        "title": "4. Legal Basis for Processing",
+        "content": "The processing of personal data is based on the consent of the data subject (Art. 6, par. 1, letter a) of GDPR), expressed at the time of submitting the contact form, and on the need to follow up on the received request (Art. 6, par. 1, letter b) of GDPR – execution of pre-contractual measures)."
+      },
+      "thirdParty": {
+        "title": "5. Third-Party Services",
+        "content": "For sending emails from the contact form, we use the Resend service (resend.com), a GDPR-compliant transactional email service. Data is transmitted to Resend exclusively for message processing and delivery.",
+        "moreInfo": "For more information about Resend's privacy:"
+      },
+      "cookies": {
+        "title": "6. Cookies and Tracking Technologies",
+        "content": "This website does not use profiling or marketing cookies. Only strictly necessary technical cookies may be used for site functionality (e.g., for managing language preference), which do not require consent.",
+        "noAnalytics": "No third-party analytics services that track user behavior are active."
+      },
+      "retention": {
+        "title": "7. Data Retention",
+        "content": "Personal data collected through the contact form are retained for the time strictly necessary to fulfill the request and, subsequently, for the period required by current regulations or to protect the Controller's rights (maximum 24 months from collection, unless required by law)."
+      },
+      "rights": {
+        "title": "8. Data Subject Rights",
+        "intro": "Pursuant to Articles 15-22 of GDPR, the data subject has the right to:",
+        "items": {
+          "access": "Access – obtain confirmation of the existence of their data and receive a copy",
+          "rectification": "Rectification – correct inaccurate or incomplete data",
+          "erasure": "Erasure – request deletion of data (\"right to be forgotten\")",
+          "restriction": "Restriction – limit processing in certain circumstances",
+          "portability": "Portability – receive data in a structured format",
+          "objection": "Objection – object to processing for legitimate reasons",
+          "withdrawal": "Withdrawal of consent – withdraw consent at any time"
+        },
+        "contact": "To exercise your rights, you can contact the Controller through the contact form on the site."
+      },
+      "complaint": {
+        "title": "9. Complaint to Supervisory Authority",
+        "content": "The data subject has the right to lodge a complaint with the Data Protection Authority (www.garanteprivacy.it) if they believe that the processing of their data violates current regulations."
+      },
+      "changes": {
+        "title": "10. Changes to Privacy Policy",
+        "content": "The Controller reserves the right to modify this Privacy Policy at any time. Changes will be published on this page with an indication of the last update date. We recommend consulting this page periodically."
+      }
+    }
+  },
+  "terms": {
+    "backToHome": "Back to Home",
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated",
+    "sections": {
+      "acceptance": {
+        "title": "1. Acceptance of Terms",
+        "content": "Access to and use of the NEXUS.dev website (hereinafter \"Site\") are subject to acceptance of these Terms of Service. By browsing or using the Site, the user declares to have read, understood, and fully accepted these terms.",
+        "warning": "If you do not accept these terms, please do not use the Site."
+      },
+      "ip": {
+        "title": "2. Intellectual Property",
+        "intro": "All content on the Site, including but not limited to:",
+        "items": [
+          "Texts, articles, and documentation",
+          "Design, layout, and graphical interface",
+          "Images, illustrations, and photographs",
+          "Source code and projects shown in the portfolio",
+          "Logos, trademarks, and distinctive signs"
+        ],
+        "ownership": "are the exclusive property of Nexus or their respective owners (in the case of open source projects or projects made for third-party clients), and are protected by Italian and international copyright and intellectual property laws.",
+        "openSource": "Projects marked as Open Source are released under their respective licenses indicated in the relevant repositories (e.g., MIT, Apache 2.0)."
+      },
+      "permitted": {
+        "title": "3. Permitted Use",
+        "intro": "The user is authorized to:",
+        "items": [
+          "View and consult Site content for personal, non-commercial use",
+          "Share links to the Site on their social channels or websites",
+          "Contact the owner through the contact form for professional inquiries"
+        ]
+      },
+      "prohibited": {
+        "title": "4. Prohibited Use",
+        "intro": "The following is expressly prohibited:",
+        "items": {
+          "reproduction": "Unauthorized reproduction – Copying, reproducing, distributing, or modifying any Site content without explicit written authorization",
+          "scraping": "Scraping and data mining – Using bots, crawlers, spiders, or other automated tools to extract data or content from the Site",
+          "commercial": "Unauthorized commercial use – Using content, design, or code for commercial purposes without a license",
+          "alteration": "Content alteration – Removing, modifying, or obscuring copyright notices, trademarks, or other proprietary indications",
+          "harmful": "Harmful activities – Attempting to compromise Site security, introduce malware, or interfere with its operation"
+        }
+      },
+      "disclaimer": {
+        "title": "5. Disclaimer",
+        "intro": "The Site and all its content are provided \"as is\" and \"as available\", without warranties of any kind, express or implied.",
+        "subIntro": "In particular:",
+        "items": {
+          "code": "Code and tutorials – Any code, snippets, or guides published on the Site are provided for educational and informational purposes. Use is at the user's own risk. Nexus is not responsible for damages resulting from the use of such code in production environments.",
+          "accuracy": "Information accuracy – Despite efforts to keep information accurate and up-to-date, Nexus does not guarantee the completeness, accuracy, or timeliness of the content.",
+          "availability": "Service availability – There is no guarantee that the Site will always be accessible, error-free, or free from viruses or harmful components."
+        }
+      },
+      "liability": {
+        "title": "6. Limitation of Liability",
+        "content": "To the extent permitted by applicable law, Nexus shall in no case be liable for direct, indirect, incidental, consequential, special, or punitive damages arising from the use or inability to use the Site, including but not limited to: data loss, loss of profits, business interruption, or any other commercial damage."
+      },
+      "thirdParty": {
+        "title": "7. Links to Third-Party Sites",
+        "content": "The Site may contain links to third-party websites (e.g., GitHub, LinkedIn, project demos). These links are provided solely for user convenience. Nexus has no control over such sites and is not responsible for their content, privacy policies, or practices. Access to third-party sites is at the user's own risk."
+      },
+      "services": {
+        "title": "8. Professional Services",
+        "content": "Professional services offered by Nexus (web development, consulting, etc.) are governed by separate contracts stipulated on a case-by-case basis with the client. These Terms of Service apply exclusively to the use of the website and not to contractual relationships arising from professional engagements."
+      },
+      "changes": {
+        "title": "9. Changes to Terms",
+        "content": "Nexus reserves the right to modify these Terms of Service at any time and without notice. Changes will be effective from the moment of publication on the Site. Continued use of the Site after publication of changes constitutes acceptance of the new terms."
+      },
+      "jurisdiction": {
+        "title": "10. Applicable Law and Jurisdiction",
+        "content": "These Terms of Service are governed by Italian law. For any dispute relating to the interpretation, execution, or termination of these terms, the competent court shall be exclusively the court of the consumer's place of residence or domicile, if applicable, or alternatively the court of jurisdiction according to current regulations."
+      },
+      "contact": {
+        "title": "11. Contact",
+        "content": "For any questions regarding these Terms of Service, you can contact Nexus through the contact form on the Site."
+      }
+    }
+  }
+}

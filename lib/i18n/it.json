@@ -1,0 +1,458 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Chi Sono",
+    "services": "Servizi",
+    "projects": "Progetti",
+    "contact": "Contatti",
+    "startProject": "Inizia un Progetto"
+  },
+  "hero": {
+    "badge": "Full-Stack Developer & Cybersecurity Enthusiast",
+    "headline1": "Sviluppo il",
+    "headline2": "Futuro Digitale",
+    "headline3": "del tuo Business.",
+    "subheadline": "Trasformo idee in esperienze web innovative, sicure e performanti. Aiuto le aziende a crescere con un design accattivante e una solida architettura tecnica.",
+    "ctaPrimary": "I miei Progetti",
+    "ctaSecondary": "Contattami",
+    "stats": {
+      "projects": "Progetti Consegnati",
+      "satisfaction": "Soddisfazione Clienti",
+      "experience": "Anni di Esperienza",
+      "response": "Tempo di Risposta"
+    },
+    "scroll": "Scorri"
+  },
+  "about": {
+    "label": "Chi Sono",
+    "title": "Creatività & Sicurezza",
+    "profileAlt": "Foto del profilo",
+    "description": "Sono uno sviluppatore Full-Stack con una passione per la sicurezza informatica. Attualmente specializzando in Cybersecurity presso la Fondazione ITS Academy Adriano Olivetti, unisco la creatività del design alla rigorosità tecnica. Da 3 anni scrivo codice per creare soluzioni che non sono solo belle da vedere, ma robuste e scalabili.",
+    "cards": {
+      "approach": {
+        "title": "Approccio Orientato alle Soluzioni",
+        "description": "Ogni progetto inizia con la comprensione delle tue sfide uniche. Mi concentro sulla consegna di risultati tangibili che fanno crescere il tuo business."
+      },
+      "learning": {
+        "title": "Apprendimento Continuo",
+        "description": "La tecnologia evolve rapidamente. Resto all'avanguardia, esplorando costantemente nuovi strumenti e metodologie per offrirti le migliori soluzioni."
+      },
+      "quality": {
+        "title": "Ossessionato dalla Qualità",
+        "description": "Dal codice pulito ai design pixel-perfect, mantengo i più alti standard in ogni aspetto dello sviluppo."
+      }
+    },
+    "techStack": "Stack Tecnologico",
+    "techCategories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database",
+      "tools": "Tools"
+    }
+  },
+  "services": {
+    "label": "Servizi",
+    "title": "Cosa Posso Fare Per Te",
+    "description": "Servizi di sviluppo web completi progettati per elevare la tua presenza digitale e guidare la crescita del business.",
+    "items": {
+      "webDev": {
+        "title": "Sviluppo Web & App",
+        "description": "Siti web moderni, Landing Page ad alta conversione e Applicazioni Web complesse (SaaS) costruite su misura.",
+        "features": ["Siti Web Moderni", "Landing Page", "Applicazioni SaaS", "Piattaforme E-commerce"]
+      },
+      "design": {
+        "title": "UI/UX & Design",
+        "description": "Interfacce intuitive e accattivanti che guidano l'utente e rafforzano l'identità del brand.",
+        "features": ["Design Responsivo", "Prototipazione UI/UX", "Brand Identity", "Animazioni Fluide"]
+      },
+      "security": {
+        "title": "Sicurezza & Performance",
+        "description": "Codice ottimizzato per la velocità e best-practices di sicurezza per proteggere i dati dei tuoi utenti.",
+        "features": ["Ottimizzazione Core Web Vitals", "Best Practice Sicurezza", "Protezione Dati", "CDN & Caching"]
+      }
+    },
+    "cta": {
+      "question": "Hai un progetto unico in mente?",
+      "link": "Discutiamo le tue esigenze"
+    },
+    "learnMore": "Scopri di Più"
+  },
+  "projects": {
+    "label": "Portfolio",
+    "title": "I Miei Progetti",
+    "description": "Una selezione dei miei lavori più recenti. Ogni progetto è un'opportunità per spingermi oltre e creare qualcosa di unico.",
+    "viewProject": "Vedi Progetto",
+    "viewCode": "Codice",
+    "backToPortfolio": "Torna al Portfolio",
+    "demoNote": "Questo è un progetto demo che dimostra l'integrazione di LLM in applicazioni web.",
+    "filters": {
+      "all": "Tutti",
+      "liveDemo": "Live Demo",
+      "openSource": "Open Source",
+      "inDevelopment": "In Sviluppo"
+    },
+    "cta": {
+      "title": "Hai un progetto in mente?",
+      "description": "Trasformiamo insieme la tua idea in realtà. Contattami per una consulenza gratuita.",
+      "button": "Inizia un Progetto"
+    },
+    "items": {
+      "copycraft": {
+        "title": "CopyCraft AI",
+        "description": "Generatore di contenuti social intelligente. Crea caption e hashtag in secondi usando Google Gemini.",
+        "tags": ["Next.js", "Gemini API", "Server Actions"]
+      },
+      "menutranslator": {
+        "title": "MenuTranslator",
+        "description": "Strumento per l'Horeca: traduce menu mantenendo i nomi originali e spiegando gli ingredienti.",
+        "tags": ["Next.js", "AI", "i18n"]
+      },
+      "secureguard": {
+        "title": "SecureGuard Audit",
+        "description": "Suite di script Python per l'analisi automatizzata delle vulnerabilità web (OWASP Top 10).",
+        "tags": ["Python", "Cybersecurity", "Bash"]
+      },
+      "nexuscommerce": {
+        "title": "Nexus Commerce v2",
+        "description": "Piattaforma e-commerce scalabile con architettura a microservizi e pagamenti sicuri.",
+        "tags": ["React", "Node.js", "Stripe"]
+      }
+    }
+  },
+  "contact": {
+    "label": "Contatti",
+    "title": "Pronto a Realizzare la Tua Idea?",
+    "description": "Discutiamo il tuo progetto ed esploriamo come possiamo creare qualcosa di eccezionale insieme.",
+    "conversation": {
+      "title": "Iniziamo una Conversazione",
+      "description": "Che tu abbia un progetto specifico in mente o voglia semplicemente esplorare le possibilità, sono qui per aiutarti. Compila il form e ti risponderò entro 24 ore."
+    },
+    "info": {
+      "email": "Email",
+      "responseTime": "Tempo di Risposta",
+      "responseValue": "Di solito entro 24 ore"
+    },
+    "expect": {
+      "title": "Cosa Aspettarsi",
+      "items": ["Consulenza iniziale gratuita", "Proposta progetto dettagliata", "Prezzi trasparenti", "Comunicazione flessibile"]
+    },
+    "form": {
+      "name": "Nome",
+      "namePlaceholder": "Il tuo nome",
+      "email": "Email",
+      "emailPlaceholder": "tua@email.com",
+      "projectType": "Tipo di Progetto",
+      "projectTypePlaceholder": "Seleziona tipo di progetto",
+      "message": "Messaggio",
+      "messagePlaceholder": "Raccontami del tuo progetto...",
+      "submit": "Invia Messaggio",
+      "submitting": "Invio in corso...",
+      "privacy": "Inviando, accetti la nostra privacy policy."
+    },
+    "projectTypes": {
+      "website": "Sviluppo Sito Web",
+      "webapp": "Applicazione Web",
+      "ecommerce": "Piattaforma E-commerce",
+      "optimization": "Ottimizzazione Prestazioni",
+      "consulting": "Consulenza Tecnica",
+      "other": "Altro"
+    },
+    "success": {
+      "title": "Messaggio Inviato!",
+      "description": "Grazie per avermi contattato. Ti risponderò entro 24 ore.",
+      "button": "Invia un Altro Messaggio"
+    },
+    "errors": {
+      "nameMin": "Il nome deve contenere almeno 2 caratteri",
+      "emailInvalid": "Inserisci un indirizzo email valido",
+      "projectTypeRequired": "Seleziona un tipo di progetto",
+      "messageMin": "Il messaggio deve contenere almeno 10 caratteri"
+    }
+  },
+  "footer": {
+    "description": "Sviluppo il futuro digitale del tuo business. Full-Stack Developer con focus su sicurezza, performance e design innovativo.",
+    "navigation": "Navigazione",
+    "services": "Servizi",
+    "webDevelopment": "Sviluppo Web & App",
+    "designServices": "UI/UX & Design",
+    "securityServices": "Sicurezza & Performance",
+    "consulting": "Consulenza",
+    "rights": "Tutti i diritti riservati.",
+    "privacy": "Privacy Policy",
+    "terms": "Termini di Servizio"
+  },
+  "highlights": {
+    "badge": "Esplora",
+    "title": "Cosa Posso Offrirti",
+    "subtitle": "Naviga tra le sezioni per scoprire chi sono, cosa faccio e come possiamo lavorare insieme.",
+    "learnMore": "Scopri di più",
+    "about": {
+      "title": "Chi Sono",
+      "description": "Scopri la mia storia, le competenze tecniche e il percorso che mi ha portato a diventare uno sviluppatore web specializzato."
+    },
+    "projects": {
+      "title": "Progetti",
+      "description": "Esplora il mio portfolio: applicazioni AI, e-commerce, sistemi di sicurezza e molto altro."
+    },
+    "contact": {
+      "title": "Contatti",
+      "description": "Hai un progetto in mente? Parliamone! Sono sempre aperto a nuove collaborazioni."
+    },
+    "featured": {
+      "badge": "Progetto in Evidenza",
+      "title": "CopyCraft AI",
+      "description": "Generatore di copy marketing avanzato powered by AI. Crea contenuti persuasivi in pochi secondi.",
+      "cta": "Vedi Demo"
+    }
+  },
+  "coreValues": {
+    "security": {
+      "title": "Security First",
+      "description": "Approccio 'Secure by Design' per proteggere i tuoi dati."
+    },
+    "performance": {
+      "title": "Performance",
+      "description": "Siti ultra-veloci ottimizzati per i Core Web Vitals."
+    },
+    "custom": {
+      "title": "Custom Made",
+      "description": "Nessun template precotto. Design su misura per il tuo brand."
+    }
+  },
+  "demos": {
+    "copycraft": {
+      "poweredBy": "Powered by Google Gemini",
+      "tagline": "Il tuo Social Media Manager personale. Genera contenuti coinvolgenti in pochi secondi.",
+      "topicLabel": "Di cosa vuoi parlare oggi?",
+      "topicPlaceholder": "Es: Nuovo menu estivo, Sconti Black Friday, Lancio prodotto...",
+      "toneLabel": "Tono del messaggio",
+      "tonePlaceholder": "Seleziona tono",
+      "platformLabel": "Piattaforma",
+      "platformPlaceholder": "Seleziona piattaforma",
+      "tones": {
+        "fun": "😄 Divertente",
+        "funDesc": "Leggero e coinvolgente",
+        "professional": "💼 Professionale",
+        "professionalDesc": "Autorevole e formale",
+        "urgent": "🔥 Urgente",
+        "urgentDesc": "Crea senso di scarsità"
+      },
+      "generateButton": "Genera Contenuti",
+      "generating": "Generando...",
+      "generatedContent": "Contenuto Generato",
+      "copy": "Copia",
+      "copied": "Copiato!",
+      "errorEmpty": "Inserisci un argomento per il post",
+      "errorGeneric": "Errore nella generazione"
+    },
+    "menutranslator": {
+      "tagline": "Traduci il tuo menu mantenendo l'identità italiana. Perfetto per ristoranti che accolgono clienti internazionali.",
+      "menuLabel": "Incolla il tuo menu italiano",
+      "menuPlaceholder": "Incolla qui il tuo menu (es. Spaghetti alla Carbonara: uova, guanciale, pecorino...)",
+      "menuHint": "Inserisci i piatti con le loro descrizioni. I nomi italiani verranno mantenuti nella traduzione.",
+      "useExample": "Usa esempio",
+      "translateButton": "Traduci Menu 🌍",
+      "translating": "Traduzione in corso...",
+      "copy": "Copia",
+      "copied": "Copiato!",
+      "errorMinLength": "Inserisci almeno 10 caratteri del tuo menu",
+      "errorGeneric": "Errore nella traduzione",
+      "features": {
+        "identity": {
+          "title": "Identità Preservata",
+          "description": "I nomi originali dei piatti rimangono in italiano"
+        },
+        "languages": {
+          "title": "3 Lingue Simultanee",
+          "description": "Inglese, Francese e Cinese in un solo click"
+        },
+        "speed": {
+          "title": "Veloce & Preciso",
+          "description": "Traduzioni professionali in pochi secondi"
+        }
+      }
+    }
+  },
+  "timeline": {
+    "badge": "Il Mio Percorso",
+    "title": "La Storia Dietro al",
+    "titleHighlight": "Codice",
+    "subtitle": "Ogni sviluppatore ha una storia. Ecco la mia: un viaggio dalla curiosità alla professione.",
+    "cta": {
+      "question": "E il prossimo capitolo?",
+      "answer": "Potremmo scriverlo insieme."
+    },
+    "milestones": {
+      "origins": {
+        "phase": "Le Origini",
+        "title": "Dal Gaming al Codice",
+        "description": "Tutto è iniziato con la curiosità. La passione per i videogiochi si è trasformata presto in voglia di capire 'come funzionano le cose'. Le prime righe di codice sono state scritte per puro divertimento, accendendo una scintilla che non si è più spenta."
+      },
+      "dualPath": {
+        "phase": "La Doppia Strada",
+        "title": "Umanista Digitale",
+        "description": "Mentre frequentavo il Liceo Linguistico, coltivavo parallelamente lo studio dell'informatica da autodidatta. Questa formazione ibrida mi ha insegnato che il codice è, prima di tutto, un linguaggio per comunicare e risolvere problemi."
+      },
+      "choice": {
+        "phase": "La Scelta",
+        "title": "Il salto nella Cybersecurity",
+        "description": "Dopo il diploma, ho deciso di trasformare la passione in professione iscrivendomi alla Fondazione ITS Academy Adriano Olivetti. Qui ho capito che non basta costruire: bisogna proteggere. Ho unito lo sviluppo Full-Stack alla mentalità difensiva della Security."
+      },
+      "nexus": {
+        "phase": "Nexus",
+        "title": "La Missione Nexus",
+        "description": "Oggi metto le mie competenze al servizio delle piccole e medie imprese. Il mio obiettivo non è solo creare siti web, ma fornire strumenti digitali sicuri che permettano alle attività locali di crescere e competere nel mercato globale."
+      }
+    }
+  },
+  "privacy": {
+    "backToHome": "Torna alla Home",
+    "title": "Privacy Policy",
+    "lastUpdated": "Ultimo aggiornamento",
+    "sections": {
+      "controller": {
+        "title": "1. Titolare del Trattamento",
+        "content": "Il Titolare del trattamento dei dati personali è Nexus (di seguito \"Titolare\" o \"NEXUS.dev\"), raggiungibile tramite il modulo di contatto presente sul sito o all'indirizzo email indicato nella sezione Contatti."
+      },
+      "dataTypes": {
+        "title": "2. Tipologia di Dati Raccolti",
+        "intro": "I dati personali raccolti attraverso questo sito web sono esclusivamente quelli forniti volontariamente dall'utente tramite il Modulo di Contatto:",
+        "items": {
+          "name": "Nome – per identificare il mittente",
+          "email": "Indirizzo Email – per poter rispondere alla richiesta",
+          "projectType": "Tipo di Progetto – per comprendere la natura della richiesta",
+          "message": "Messaggio – contenuto della comunicazione"
+        }
+      },
+      "purpose": {
+        "title": "3. Finalità del Trattamento",
+        "intro": "I dati personali raccolti sono utilizzati esclusivamente per:",
+        "items": [
+          "Rispondere alle richieste di informazioni inviate tramite il modulo di contatto",
+          "Fornire preventivi o consulenze richieste",
+          "Gestire eventuali rapporti professionali derivanti dal contatto iniziale"
+        ],
+        "noMarketing": "Non vengono inviate newsletter, comunicazioni di marketing o promozionali a meno di esplicito consenso separato."
+      },
+      "legalBasis": {
+        "title": "4. Base Giuridica del Trattamento",
+        "content": "Il trattamento dei dati personali si basa sul consenso dell'interessato (Art. 6, par. 1, lett. a) del GDPR), espresso al momento dell'invio del modulo di contatto, e sulla necessità di dare seguito alla richiesta ricevuta (Art. 6, par. 1, lett. b) del GDPR – esecuzione di misure precontrattuali)."
+      },
+      "thirdParty": {
+        "title": "5. Servizi di Terze Parti",
+        "content": "Per l'invio delle email dal modulo di contatto utilizziamo il servizio Resend (resend.com), un servizio di email transazionale conforme al GDPR. I dati vengono trasmessi a Resend esclusivamente per l'elaborazione e la consegna del messaggio.",
+        "moreInfo": "Per maggiori informazioni sulla privacy di Resend:"
+      },
+      "cookies": {
+        "title": "6. Cookie e Tecnologie di Tracciamento",
+        "content": "Questo sito web non utilizza cookie di profilazione o marketing. Potrebbero essere utilizzati esclusivamente cookie tecnici strettamente necessari al funzionamento del sito (ad esempio, per la gestione della lingua preferita), che non richiedono consenso.",
+        "noAnalytics": "Non sono attivi servizi di analytics di terze parti che tracciano il comportamento degli utenti."
+      },
+      "retention": {
+        "title": "7. Conservazione dei Dati",
+        "content": "I dati personali raccolti tramite il modulo di contatto sono conservati per il tempo strettamente necessario a evadere la richiesta e, successivamente, per il periodo richiesto dalla normativa vigente o per tutelare i diritti del Titolare (massimo 24 mesi dalla raccolta, salvo obblighi di legge)."
+      },
+      "rights": {
+        "title": "8. Diritti dell'Interessato",
+        "intro": "Ai sensi degli articoli 15-22 del GDPR, l'interessato ha diritto di:",
+        "items": {
+          "access": "Accesso – ottenere conferma dell'esistenza dei propri dati e riceverne copia",
+          "rectification": "Rettifica – correggere dati inesatti o incompleti",
+          "erasure": "Cancellazione – richiedere la cancellazione dei dati (\"diritto all'oblio\")",
+          "restriction": "Limitazione – limitare il trattamento in determinate circostanze",
+          "portability": "Portabilità – ricevere i dati in formato strutturato",
+          "objection": "Opposizione – opporsi al trattamento per motivi legittimi",
+          "withdrawal": "Revoca del consenso – revocare il consenso in qualsiasi momento"
+        },
+        "contact": "Per esercitare i propri diritti, è possibile contattare il Titolare tramite il modulo di contatto sul sito."
+      },
+      "complaint": {
+        "title": "9. Reclamo all'Autorità di Controllo",
+        "content": "L'interessato ha il diritto di proporre reclamo all'Autorità Garante per la Protezione dei Dati Personali (www.garanteprivacy.it) qualora ritenga che il trattamento dei propri dati violi la normativa vigente."
+      },
+      "changes": {
+        "title": "10. Modifiche alla Privacy Policy",
+        "content": "Il Titolare si riserva il diritto di modificare questa Privacy Policy in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con indicazione della data di ultimo aggiornamento. Si consiglia di consultare periodicamente questa pagina."
+      }
+    }
+  },
+  "terms": {
+    "backToHome": "Torna alla Home",
+    "title": "Termini di Servizio",
+    "lastUpdated": "Ultimo aggiornamento",
+    "sections": {
+      "acceptance": {
+        "title": "1. Accettazione dei Termini",
+        "content": "L'accesso e l'utilizzo del sito web NEXUS.dev (di seguito \"Sito\") sono subordinati all'accettazione dei presenti Termini di Servizio. Navigando o utilizzando il Sito, l'utente dichiara di aver letto, compreso e accettato integralmente questi termini.",
+        "warning": "Se non si accettano i presenti termini, si prega di non utilizzare il Sito."
+      },
+      "ip": {
+        "title": "2. Proprietà Intellettuale",
+        "intro": "Tutti i contenuti presenti sul Sito, inclusi ma non limitati a:",
+        "items": [
+          "Testi, articoli e documentazione",
+          "Design, layout e interfaccia grafica",
+          "Immagini, illustrazioni e fotografie",
+          "Codice sorgente e progetti mostrati nel portfolio",
+          "Loghi, marchi e segni distintivi"
+        ],
+        "ownership": "sono di proprietà esclusiva di Nexus o dei rispettivi titolari (nel caso di progetti open source o realizzati per clienti terzi), e sono protetti dalle leggi italiane e internazionali in materia di diritto d'autore e proprietà intellettuale.",
+        "openSource": "I progetti contrassegnati come Open Source sono rilasciati sotto le rispettive licenze indicate nei relativi repository (es. MIT, Apache 2.0)."
+      },
+      "permitted": {
+        "title": "3. Utilizzo Consentito",
+        "intro": "L'utente è autorizzato a:",
+        "items": [
+          "Visualizzare e consultare i contenuti del Sito per uso personale e non commerciale",
+          "Condividere link al Sito sui propri canali social o siti web",
+          "Contattare il titolare tramite il modulo di contatto per richieste professionali"
+        ]
+      },
+      "prohibited": {
+        "title": "4. Utilizzo Vietato",
+        "intro": "È espressamente vietato:",
+        "items": {
+          "reproduction": "Riproduzione non autorizzata – Copiare, riprodurre, distribuire o modificare qualsiasi contenuto del Sito senza esplicita autorizzazione scritta",
+          "scraping": "Scraping e data mining – Utilizzare bot, crawler, spider o altri strumenti automatizzati per estrarre dati o contenuti dal Sito",
+          "commercial": "Uso commerciale non autorizzato – Utilizzare contenuti, design o codice per scopi commerciali senza licenza",
+          "alteration": "Alterazione dei contenuti – Rimuovere, modificare o oscurare avvisi di copyright, trademark o altre indicazioni di proprietà",
+          "harmful": "Attività dannose – Tentare di compromettere la sicurezza del Sito, introdurre malware o interferire con il suo funzionamento"
+        }
+      },
+      "disclaimer": {
+        "title": "5. Esclusione di Responsabilità",
+        "intro": "Il Sito e tutti i suoi contenuti sono forniti \"così come sono\" (as is) e \"come disponibili\" (as available), senza garanzie di alcun tipo, esplicite o implicite.",
+        "subIntro": "In particolare:",
+        "items": {
+          "code": "Codice e tutorial – Qualsiasi codice, snippet o guida pubblicati sul Sito sono forniti a scopo educativo e informativo. L'utilizzo è a rischio e pericolo dell'utente. Nexus non è responsabile per danni derivanti dall'uso di tale codice in ambienti di produzione.",
+          "accuracy": "Accuratezza delle informazioni – Nonostante l'impegno per mantenere le informazioni accurate e aggiornate, Nexus non garantisce la completezza, accuratezza o attualità dei contenuti.",
+          "availability": "Disponibilità del servizio – Non si garantisce che il Sito sia sempre accessibile, privo di errori o libero da virus o componenti dannosi."
+        }
+      },
+      "liability": {
+        "title": "6. Limitazione di Responsabilità",
+        "content": "Nei limiti consentiti dalla legge applicabile, Nexus non sarà in alcun caso responsabile per danni diretti, indiretti, incidentali, conseguenziali, speciali o punitivi derivanti dall'uso o dall'impossibilità di utilizzare il Sito, inclusi ma non limitati a: perdita di dati, perdita di profitti, interruzione dell'attività o qualsiasi altro danno commerciale."
+      },
+      "thirdParty": {
+        "title": "7. Link a Siti di Terze Parti",
+        "content": "Il Sito può contenere link a siti web di terze parti (es. GitHub, LinkedIn, demo di progetti). Questi link sono forniti esclusivamente per comodità dell'utente. Nexus non ha controllo su tali siti e non è responsabile per i loro contenuti, politiche sulla privacy o pratiche. L'accesso a siti di terze parti avviene a rischio dell'utente."
+      },
+      "services": {
+        "title": "8. Servizi Professionali",
+        "content": "I servizi professionali offerti da Nexus (sviluppo web, consulenza, ecc.) sono regolati da contratti separati stipulati caso per caso con il cliente. I presenti Termini di Servizio si applicano esclusivamente all'utilizzo del Sito web e non ai rapporti contrattuali derivanti da incarichi professionali."
+      },
+      "changes": {
+        "title": "9. Modifiche ai Termini",
+        "content": "Nexus si riserva il diritto di modificare i presenti Termini di Servizio in qualsiasi momento e senza preavviso. Le modifiche saranno efficaci dal momento della pubblicazione sul Sito. L'uso continuato del Sito dopo la pubblicazione delle modifiche costituisce accettazione dei nuovi termini."
+      },
+      "jurisdiction": {
+        "title": "10. Legge Applicabile e Foro Competente",
+        "content": "I presenti Termini di Servizio sono regolati dalla legge italiana. Per qualsiasi controversia relativa all'interpretazione, esecuzione o risoluzione dei presenti termini, sarà competente in via esclusiva il Foro del luogo di residenza o domicilio del consumatore, se applicabile, o in alternativa il Foro di competenza secondo la normativa vigente."
+      },
+      "contact": {
+        "title": "11. Contatti",
+        "content": "Per qualsiasi domanda relativa ai presenti Termini di Servizio, è possibile contattare Nexus tramite il modulo di contatto presente sul Sito."
+      }
+    }
+  }
+}
