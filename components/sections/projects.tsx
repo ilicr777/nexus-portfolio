@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
-import { Sparkles, Wand2, Globe, Shield, ShoppingCart, Github, Clock } from "lucide-react";
+import { Sparkles, Wand2, Globe, Shield, ShoppingCart, Github, Clock, Scan } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useDictionary } from "@/components/dictionary-provider";
 
@@ -72,6 +72,16 @@ const projectConfig = {
     buttonIcon: Clock,
     status: "coming" as const,
   },
+  securityscanner: {
+    icon: Scan,
+    gradient: "from-cyan-500/20 to-blue-500/20",
+    accent: "group-hover:text-cyan-400",
+    link: "/projects/security-scanner",
+    linkType: "internal" as const,
+    buttonText: "Try Scanner 🔒",
+    buttonIcon: Shield,
+    status: "live" as const,
+  },
 };
 
 type ProjectKey = keyof typeof projectConfig;
@@ -81,7 +91,7 @@ export function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { dictionary } = useDictionary();
 
-  const projectKeys: ProjectKey[] = ["copycraft", "menutranslator", "secureguard", "nexuscommerce"];
+  const projectKeys: ProjectKey[] = ["copycraft", "menutranslator", "securityscanner", "secureguard", "nexuscommerce"];
 
   return (
     <section

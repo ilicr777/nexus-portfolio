@@ -116,6 +116,11 @@
         "title": "Nexus Commerce v2",
         "description": "Piattaforma e-commerce scalabile con architettura a microservizi e pagamenti sicuri.",
         "tags": ["React", "Node.js", "Stripe"]
+      },
+      "securityscanner": {
+        "title": "Security Scanner",
+        "description": "Analizzatore di sicurezza del browser in tempo reale. Controlla HTTPS, privacy, rilevamento bot e altro.",
+        "tags": ["TypeScript", "Cybersecurity", "Client-Side"]
       }
     }
   },
@@ -271,6 +276,25 @@
           "description": "Traduzioni professionali in pochi secondi"
         }
       }
+    },
+    "securityScanner": {
+      "title": "Security Posture Scanner",
+      "subtitle": "Analisi di sicurezza del browser in tempo reale",
+      "description": "Questo strumento analizza la configurazione di sicurezza del tuo browser, le impostazioni sulla privacy e le potenziali vulnerabilità. Tutti i controlli vengono eseguiti localmente - nessun dato lascia il tuo dispositivo.",
+      "features": {
+        "title": "Cosa Controlliamo",
+        "items": [
+          "Stato della connessione HTTPS crittografata",
+          "Sicurezza e permessi dei cookie",
+          "Configurazione Do Not Track (DNT)",
+          "Firme di rilevamento bot/automazione",
+          "Integrità del display e viewport",
+          "Proprietà della connessione di rete",
+          "Impostazioni lingua e localizzazione"
+        ]
+      },
+      "disclaimer": "Questo scanner è a scopo educativo. Dimostra tecniche di analisi della sicurezza basate sul browser.",
+      "backToProjects": "Torna ai Progetti"
     }
   },
   "timeline": {
