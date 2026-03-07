@@ -95,9 +95,9 @@ export function Hero() {
         >
           {/* Badge - Terminal Style */}
           <motion.div variants={itemVariants}>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-primary/30 bg-black/50 backdrop-blur-sm mb-8 font-mono text-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border/50 bg-background/50 backdrop-blur-md mb-8 font-mono text-sm shadow-sm">
               <Terminal className="h-4 w-4 text-primary" />
-              <span className="text-emerald-400">$</span>
+              <span className="text-emerald-500 dark:text-emerald-400">$</span>
               <TerminalTyping 
                 text={dictionary.hero.badge} 
                 speed={40}
@@ -109,7 +109,7 @@ export function Hero() {
           {/* Main Headline - Cyberpunk Style */}
           <motion.h1
             variants={itemVariants}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight max-w-4xl"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter max-w-4xl text-foreground"
           >
             {dictionary.hero.headline1}{" "}
             <span className="relative">
@@ -133,7 +133,7 @@ export function Hero() {
           {/* Subheadline */}
           <motion.p
             variants={itemVariants}
-            className="mt-6 md:mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl text-balance leading-relaxed"
+            className="mt-6 md:mt-8 text-lg md:text-xl mb-4 text-muted-foreground font-light max-w-2xl text-balance leading-relaxed"
           >
             {dictionary.hero.subheadline}
           </motion.p>
@@ -190,7 +190,7 @@ export function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 + index * 0.15, duration: 0.5 }}
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                className={`group relative p-6 rounded-2xl border border-border bg-black/30 backdrop-blur-sm ${value.border} hover:bg-black/50 transition-all duration-300 card-cyber`}
+                className={`group relative p-6 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md ${value.border} hover:bg-card/90 transition-all duration-300 shadow-soft hover:shadow-soft-lg`}
               >
                 {/* Corner Accents */}
                 <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-primary/50" />

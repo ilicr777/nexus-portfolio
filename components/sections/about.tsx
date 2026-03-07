@@ -51,7 +51,7 @@ function TechMarquee({ direction = "left" }: { direction?: "left" | "right" }) {
         {[...techStack, ...techStack].map((tech, index) => (
           <div
             key={`${tech.name}-${index}`}
-            className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border bg-card/50 backdrop-blur-sm hover:bg-card hover:border-primary/50 transition-all duration-300 cursor-default whitespace-nowrap"
+            className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft hover:shadow-soft-lg hover:border-primary/40 transition-all duration-300 cursor-default whitespace-nowrap"
           >
             <span className="text-xl">{tech.icon}</span>
             <span className="text-sm font-medium text-muted-foreground">
@@ -115,7 +115,7 @@ export function About() {
             <span className="text-sm font-medium text-primary uppercase tracking-wider">
               {dictionary.about.label}
             </span>
-            <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter text-foreground text-balance">
               {dictionary.about.title}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -129,7 +129,7 @@ export function About() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           >
             {/* Main Card - Large */}
-            <div className="md:col-span-2 lg:col-span-2 p-6 md:p-8 rounded-2xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300">
+            <div className="md:col-span-2 lg:col-span-2 p-6 md:p-8 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
               <div className="flex flex-col h-full justify-between">
                 <div>
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
@@ -158,7 +158,7 @@ export function About() {
             </div>
 
             {/* Stats Card */}
-            <div className="p-6 rounded-2xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300">
+            <div className="p-6 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
                 <span className="text-2xl">📊</span>
               </div>
@@ -180,7 +180,7 @@ export function About() {
             </div>
 
             {/* Learning Card */}
-            <div className="p-6 rounded-2xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300">
+            <div className="p-6 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
                 <span className="text-2xl">📚</span>
               </div>
@@ -191,7 +191,7 @@ export function About() {
             </div>
 
             {/* Experience Card */}
-            <div className="md:col-span-2 p-6 rounded-2xl border border-border bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all duration-300">
+            <div className="md:col-span-2 p-6 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
                 <span className="text-2xl">💼</span>
               </div>

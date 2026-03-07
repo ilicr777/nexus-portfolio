@@ -116,7 +116,7 @@ export function Projects() {
             <span className="text-sm font-medium text-primary uppercase tracking-wider">
               {dictionary.projects.label}
             </span>
-            <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter text-foreground text-balance">
               {dictionary.projects.title}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -141,7 +141,7 @@ export function Projects() {
                   variants={itemVariants}
                   className="group relative"
                 >
-                  <div className="relative h-full p-6 md:p-8 rounded-2xl border border-border bg-card/50 backdrop-blur-sm transition-all duration-500 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5">
+                  <div className="relative h-full p-6 md:p-8 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
                     {/* Status Badge */}
                     <div className="absolute top-4 right-4 z-20">
                       {isLive && (
@@ -177,7 +177,7 @@ export function Projects() {
                           <div className={`p-3 rounded-xl bg-primary/10 transition-colors duration-300 ${config.accent}`}>
                             <Icon className="h-6 w-6" />
                           </div>
-                          <h3 className="text-xl font-semibold">{project.title}</h3>
+                          <h3 className="text-xl md:text-2xl font-bold tracking-tight">{project.title}</h3>
                         </div>
                       </div>
 

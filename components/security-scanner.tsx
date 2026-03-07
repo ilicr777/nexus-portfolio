@@ -454,7 +454,7 @@ export function SecurityScanner() {
         className="relative"
       >
         {/* Outer Frame - Cyberpunk HUD Style */}
-        <div className="relative border border-cyan-500/30 bg-black/80 backdrop-blur-xl rounded-lg overflow-hidden">
+        <div className="relative border border-primary/30 bg-card/80 backdrop-blur-xl rounded-lg overflow-hidden">
           {/* Corner Accents */}
           <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-cyan-400" />
           <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-cyan-400" />

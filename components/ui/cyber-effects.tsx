@@ -102,7 +102,7 @@ export function TerminalWindow({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={cn(
-        "rounded-lg border border-border bg-black/80 backdrop-blur-xl overflow-hidden",
+        "rounded-lg border border-border bg-card/80 backdrop-blur-xl overflow-hidden",
         className
       )}
     >

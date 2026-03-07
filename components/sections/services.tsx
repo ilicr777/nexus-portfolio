@@ -42,7 +42,7 @@ function ServiceCard({ service }: { service: Service }) {
     <motion.div
       variants={itemVariants}
       whileHover={{ y: -8 }}
-      className="group relative p-6 md:p-8 rounded-2xl border border-border bg-card/50 backdrop-blur-sm transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10"
+      className="group relative p-6 md:p-8 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md transition-all duration-500 hover:border-primary/40 shadow-soft hover:shadow-soft-lg"
     >
       {/* Glow Effect */}
       <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -54,7 +54,7 @@ function ServiceCard({ service }: { service: Service }) {
         </div>
 
         {/* Title */}
-        <h3 className="text-xl md:text-2xl font-semibold mb-3 group-hover:text-primary transition-colors duration-300">
+        <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-3 group-hover:text-primary transition-colors duration-300">
           {service.title}
         </h3>
 
@@ -143,7 +143,7 @@ export function Services() {
             <span className="text-sm font-medium text-primary uppercase tracking-wider">
               {dictionary.services.label}
             </span>
-            <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter text-foreground text-balance">
               {dictionary.services.title}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">

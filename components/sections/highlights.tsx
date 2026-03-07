@@ -51,14 +51,14 @@ function HighlightCard({ href, icon, title, description, gradient, learnMore, de
         <div className={`absolute -inset-[1px] rounded-2xl bg-gradient-to-br ${gradient} opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-50`} />
         
         {/* Card */}
-        <div className="relative h-full rounded-2xl border border-border bg-card/50 backdrop-blur-sm p-8 transition-all duration-300 group-hover:border-primary/50 group-hover:bg-card/80">
+        <div className="relative h-full rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md p-8 shadow-soft transition-all duration-300 group-hover:border-primary/40 group-hover:bg-card/90 group-hover:shadow-soft-lg">
           {/* Icon */}
           <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${gradient} mb-6 transition-transform duration-300 group-hover:scale-110`}>
             {icon}
           </div>
           
           {/* Content */}
-          <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+          <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">
             {title}
           </h3>
           <p className="text-muted-foreground leading-relaxed mb-6">
@@ -127,13 +127,13 @@ export function Highlights() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-background/50 backdrop-blur-sm mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-background/50 backdrop-blur-md shadow-sm mb-6">
             <Sparkles className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-muted-foreground">
               {dictionary.highlights?.badge || "Explore"}
             </span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter text-foreground text-balance">
             {dictionary.highlights?.title || "What I Can Offer"}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -163,7 +163,7 @@ export function Highlights() {
           className="mt-20"
         >
           <Link href={`/${locale}/projects`} className="group block">
-            <div className="relative rounded-3xl border border-border bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-sm p-8 md:p-12 overflow-hidden transition-all duration-500 hover:border-primary/50">
+            <div className="relative rounded-3xl border border-border/50 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md shadow-soft p-8 md:p-12 overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
               {/* Background Pattern */}
               <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-20" />
               
@@ -176,7 +176,7 @@ export function Highlights() {
                     <Briefcase className="h-3.5 w-3.5" />
                     {dictionary.highlights?.featured?.badge || "Featured Project"}
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-3">
+                  <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-3">
                     {dictionary.highlights?.featured?.title || "CopyCraft AI"}
                   </h3>
                   <p className="text-muted-foreground max-w-lg">

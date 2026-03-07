@@ -122,7 +122,7 @@ export function Contact() {
             <span className="text-sm font-medium text-primary uppercase tracking-wider">
               {dictionary.contact.label}
             </span>
-            <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
+            <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tighter text-foreground text-balance">
               {dictionary.contact.title}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -145,7 +145,7 @@ export function Contact() {
 
                 {/* Contact Info Cards */}
                 <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 rounded-xl border border-border bg-card/50 backdrop-blur-sm">
+                  <div className="flex items-start gap-4 p-4 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-sm">
                     <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary">
                       <Mail className="h-5 w-5" />
                     </div>
@@ -160,7 +160,7 @@ export function Contact() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-4 rounded-xl border border-border bg-card/50 backdrop-blur-sm">
+                  <div className="flex items-start gap-4 p-4 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-sm">
                     <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary">
                       <MessageSquare className="h-5 w-5" />
                     </div>
@@ -174,7 +174,7 @@ export function Contact() {
                 </div>
 
                 {/* Quick Facts */}
-                <div className="p-6 rounded-xl border border-border bg-card/50 backdrop-blur-sm">
+                <div className="p-6 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft">
                   <h4 className="font-medium mb-4">{dictionary.contact.expect.title}</h4>
                   <ul className="space-y-3">
                     {dictionary.contact.expect.items.map((item) => (
@@ -197,7 +197,7 @@ export function Contact() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="flex flex-col items-center justify-center h-full p-8 rounded-2xl border border-border bg-card/50 backdrop-blur-sm text-center"
+                  className="flex flex-col items-center justify-center h-full p-8 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft text-center"
                 >
                   <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
                     <CheckCircle className="h-8 w-8 text-primary" />
@@ -218,7 +218,7 @@ export function Contact() {
               ) : (
                 <form
                   onSubmit={handleSubmit(onSubmit)}
-                  className="p-6 md:p-8 rounded-2xl border border-border bg-card/50 backdrop-blur-sm space-y-6"
+                  className="p-6 md:p-8 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft space-y-6"
                 >
                   {/* Error Message */}
                   {submitError && (
