@@ -30,7 +30,7 @@ const techStack: TechIcon[] = [
   { name: "Figma", icon: "🎯", category: "tools" },
 ];
 
-function TechMarquee({ direction = "left" }: { direction?: "left" | "right" }) {
+export function TechMarquee({ direction = "left" }: { direction?: "left" | "right" }) {
   return (
     <div className="flex overflow-hidden">
       <motion.div

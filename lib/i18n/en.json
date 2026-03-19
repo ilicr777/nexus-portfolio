@@ -9,11 +9,11 @@
   },
   "hero": {
     "badge": "Full-Stack Developer & Cybersecurity Enthusiast",
-    "headline1": "I Develop the",
-    "headline2": "Digital Future",
-    "headline3": "of Your Business.",
-    "subheadline": "I transform ideas into innovative, secure, and high-performance web experiences. I help businesses grow with captivating design and solid technical architecture.",
-    "ctaPrimary": "My Projects",
+    "headline1": "Digital",
+    "headline2": "Architectures",
+    "headline3": "Built to Generate Revenue.",
+    "subheadline": "I don't just write code: I solve complex business problems. I build fast and secure web applications for companies that demand scalability and zero technical compromises.",
+    "ctaPrimary": "Let's discuss your project",
     "ctaSecondary": "Contact Me",
     "stats": {
       "projects": "Projects Delivered",
@@ -51,31 +51,31 @@
     }
   },
   "services": {
-    "label": "Services",
-    "title": "What I Can Do For You",
-    "description": "Comprehensive web development services designed to elevate your digital presence and drive business growth.",
+    "label": "How I Work",
+    "title": "Three Pillars. One Outcome: Your Business Grows.",
+    "description": "Every project I take on is built on three concrete foundations that translate your investment into measurable business results.",
     "items": {
       "webDev": {
-        "title": "Web & App Development",
-        "description": "Modern websites, high-converting Landing Pages, and complex Web Applications (SaaS) built to measure.",
-        "features": ["Modern Websites", "Landing Pages", "SaaS Applications", "E-commerce Platforms"]
+        "title": "Your Pages Load in Under a Second",
+        "description": "Using Next.js and advanced Core Web Vitals optimization, I build interfaces that pass Google's performance benchmarks — the threshold separating sites that rank from those that don't. Every millisecond saved is a user who stays and a conversion that happens.",
+        "features": ["Sub-second Time to First Byte", "Green Core Web Vitals scores", "SEO-ready architecture", "Mobile-first by default"]
       },
       "design": {
-        "title": "UI/UX & Design",
-        "description": "Intuitive and captivating interfaces that guide users and strengthen brand identity.",
-        "features": ["Responsive Design", "UI/UX Prototyping", "Brand Identity", "Fluid Animations"]
+        "title": "AI That Eliminates Repetitive Work",
+        "description": "I integrate language models (Gemini, OpenAI) directly into your product to automate low-value operations: content generation, multilingual translation, data analysis. The result is a smarter product and a team that focuses on what actually moves the needle.",
+        "features": ["LLM API Integration (Gemini, OpenAI)", "Workflow Automation", "Multilingual AI Features", "Custom Prompt Engineering"]
       },
       "security": {
-        "title": "Security & Performance",
-        "description": "Code optimized for speed and security best-practices to protect your users' data.",
-        "features": ["Core Web Vitals Optimization", "Security Best Practices", "Data Protection", "CDN & Caching"]
+        "title": "Security Built In, Not Bolted On",
+        "description": "Every line of code follows OWASP guidelines and security-by-design principles, protecting your users' data from the most common vulnerabilities. Security isn't a final checklist — it's an architectural decision made on day one.",
+        "features": ["OWASP Top 10 Compliance", "Security-by-Design Architecture", "GDPR-ready Data Handling", "Automated Vulnerability Auditing"]
       }
     },
     "cta": {
-      "question": "Have a unique project in mind?",
-      "link": "Let's discuss your requirements"
+      "question": "Ready to build something that actually works?",
+      "link": "Let's discuss your project"
     },
-    "learnMore": "Learn More"
+    "learnMore": "Start a Project"
   },
   "projects": {
     "label": "Portfolio",

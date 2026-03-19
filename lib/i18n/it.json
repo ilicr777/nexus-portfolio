@@ -9,11 +9,11 @@
   },
   "hero": {
     "badge": "Full-Stack Developer & Cybersecurity Enthusiast",
-    "headline1": "Sviluppo il",
-    "headline2": "Futuro Digitale",
-    "headline3": "del tuo Business.",
-    "subheadline": "Trasformo idee in esperienze web innovative, sicure e performanti. Aiuto le aziende a crescere con un design accattivante e una solida architettura tecnica.",
-    "ctaPrimary": "I miei Progetti",
+    "headline1": "Architetture",
+    "headline2": "Digitali",
+    "headline3": "Costruite per Generare Fatturato.",
+    "subheadline": "Non scrivo solo codice: risolvo complessi problemi di business. Sviluppo applicazioni web veloci e sicure per aziende che richiedono scalabilità e zero compromessi tecnici.",
+    "ctaPrimary": "Discutiamo il tuo progetto",
     "ctaSecondary": "Contattami",
     "stats": {
       "projects": "Progetti Consegnati",
@@ -51,31 +51,31 @@
     }
   },
   "services": {
-    "label": "Servizi",
-    "title": "Cosa Posso Fare Per Te",
-    "description": "Servizi di sviluppo web completi progettati per elevare la tua presenza digitale e guidare la crescita del business.",
+    "label": "Come Lavoro",
+    "title": "Tre Pilastri. Un Risultato: Il Tuo Business Cresce.",
+    "description": "Ogni progetto che prendo in carico è costruito su tre fondamenta concrete che trasformano il tuo investimento in risultati di business misurabili.",
     "items": {
       "webDev": {
-        "title": "Sviluppo Web & App",
-        "description": "Siti web moderni, Landing Page ad alta conversione e Applicazioni Web complesse (SaaS) costruite su misura.",
-        "features": ["Siti Web Moderni", "Landing Page", "Applicazioni SaaS", "Piattaforme E-commerce"]
+        "title": "Le Tue Pagine Caricano in Meno di un Secondo",
+        "description": "Con Next.js e l'ottimizzazione avanzata dei Core Web Vitals, costruisco interfacce che superano i benchmark di Google — la soglia critica che separa i siti che vengono trovati da quelli che non esistono. Ogni millisecondo risparmiato è un utente che resta e una conversione che avviene.",
+        "features": ["Time to First Byte sotto il secondo", "Core Web Vitals al Verde", "Architettura SEO-ready", "Mobile-first per Default"]
       },
       "design": {
-        "title": "UI/UX & Design",
-        "description": "Interfacce intuitive e accattivanti che guidano l'utente e rafforzano l'identità del brand.",
-        "features": ["Design Responsivo", "Prototipazione UI/UX", "Brand Identity", "Animazioni Fluide"]
+        "title": "AI Che Elimina il Lavoro Ripetitivo",
+        "description": "Integro modelli linguistici (Gemini, OpenAI) direttamente nel tuo prodotto per automatizzare le operazioni a basso valore: generazione testi, traduzione multilingua, analisi dati. Il risultato è un prodotto più intelligente e un team che si concentra su ciò che sposta davvero l'ago della bilancia.",
+        "features": ["Integrazione API LLM (Gemini, OpenAI)", "Automazione dei Workflow", "Funzionalità AI Multilingua", "Prompt Engineering Personalizzato"]
       },
       "security": {
-        "title": "Sicurezza & Performance",
-        "description": "Codice ottimizzato per la velocità e best-practices di sicurezza per proteggere i dati dei tuoi utenti.",
-        "features": ["Ottimizzazione Core Web Vitals", "Best Practice Sicurezza", "Protezione Dati", "CDN & Caching"]
+        "title": "Sicurezza Integrata, Non Aggiunta Dopo",
+        "description": "Ogni riga di codice segue le linee guida OWASP e i principi di security-by-design, proteggendo i dati dei tuoi utenti dalle vulnerabilità più comuni. La sicurezza non è una checklist finale — è una decisione progettuale presa dal giorno zero.",
+        "features": ["Conformità OWASP Top 10", "Architettura Security-by-Design", "Gestione Dati GDPR-ready", "Audit Automatizzato delle Vulnerabilità"]
       }
     },
     "cta": {
-      "question": "Hai un progetto unico in mente?",
-      "link": "Discutiamo le tue esigenze"
+      "question": "Pronto a costruire qualcosa che funziona davvero?",
+      "link": "Discutiamo il tuo progetto"
     },
-    "learnMore": "Scopri di Più"
+    "learnMore": "Inizia un Progetto"
   },
   "projects": {
     "label": "Portfolio",

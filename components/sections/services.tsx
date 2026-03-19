@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Code, Palette, Shield, ArrowUpRight } from "lucide-react";
+import { Zap, BrainCircuit, Shield, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { useDictionary } from "@/components/dictionary-provider";
 
@@ -98,14 +98,14 @@ export function Services() {
 
   const services: Service[] = [
     {
-      icon: <Code className="h-6 w-6" />,
+      icon: <Zap className="h-6 w-6" />,
       title: dictionary.services.items.webDev.title,
       description: dictionary.services.items.webDev.description,
       features: dictionary.services.items.webDev.features,
       learnMore: dictionary.services.learnMore,
     },
     {
-      icon: <Palette className="h-6 w-6" />,
+      icon: <BrainCircuit className="h-6 w-6" />,
       title: dictionary.services.items.design.title,
       description: dictionary.services.items.design.description,
       features: dictionary.services.items.design.features,

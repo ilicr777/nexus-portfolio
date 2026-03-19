@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { Github, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useDictionary } from "@/components/dictionary-provider";
+import { cn } from "@/lib/utils";
 
 const socialLinks = [
   { href: "https://github.com/ilicr777", icon: Github, label: "GitHub" },
@@ -14,26 +15,29 @@ const socialLinks = [
 export function Footer() {
   const { dictionary } = useDictionary();
   const params = useParams();
+  const pathname = usePathname();
   const locale = params.locale as string;
+
+  const isActive = (href: string) =>
+    href === `/${locale}` ? pathname === href : pathname.startsWith(href);
 
   const footerLinks = [
     {
       title: dictionary.footer.navigation,
       links: [
-        { href: "#home", label: dictionary.nav.home },
-        { href: "#about", label: dictionary.nav.about },
-        { href: "#services", label: dictionary.nav.services },
-        { href: "#projects", label: dictionary.nav.projects },
-        { href: "#contact", label: dictionary.nav.contact },
+        { href: `/${locale}`, label: dictionary.nav.home },
+        { href: `/${locale}/about`, label: dictionary.nav.about },
+        { href: `/${locale}/projects`, label: dictionary.nav.projects },
+        { href: `/${locale}/contact`, label: dictionary.nav.contact },
       ],
     },
     {
       title: dictionary.footer.services,
       links: [
-        { href: "#services", label: dictionary.footer.webDevelopment },
-        { href: "#services", label: dictionary.footer.designServices },
-        { href: "#services", label: dictionary.footer.securityServices },
-        { href: "#contact", label: dictionary.footer.consulting },
+        { href: `/${locale}/contact`, label: dictionary.footer.webDevelopment },
+        { href: `/${locale}/contact`, label: dictionary.footer.designServices },
+        { href: `/${locale}/contact`, label: dictionary.footer.securityServices },
+        { href: `/${locale}/contact`, label: dictionary.footer.consulting },
       ],
     },
   ];
@@ -91,7 +95,12 @@ export function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className={cn(
+                        "transition-colors",
+                        isActive(link.href)
+                          ? "text-primary font-medium"
+                          : "text-muted-foreground hover:text-primary"
+                      )}
                     >
                       {link.label}
                     </Link>
