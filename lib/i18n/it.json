@@ -117,10 +117,10 @@
         "description": "Piattaforma e-commerce scalabile con architettura a microservizi e pagamenti sicuri.",
         "tags": ["React", "Node.js", "Stripe"]
       },
-      "securityscanner": {
-        "title": "Security Scanner",
-        "description": "Analizzatore di sicurezza del browser in tempo reale. Controlla HTTPS, privacy, rilevamento bot e altro.",
-        "tags": ["TypeScript", "Cybersecurity", "Client-Side"]
+      "surfsec": {
+        "title": "SurfSec Intelligence",
+        "description": "Piattaforma Enterprise di External Attack Surface Management per agenzie digitali.",
+        "tags": ["Python", "FastAPI", "Streamlit", "Cybersecurity"]
       }
     }
   },
@@ -277,24 +277,25 @@
         }
       }
     },
-    "securityScanner": {
-      "title": "Security Posture Scanner",
-      "subtitle": "Analisi di sicurezza del browser in tempo reale",
-      "description": "Questo strumento analizza la configurazione di sicurezza del tuo browser, le impostazioni sulla privacy e le potenziali vulnerabilità. Tutti i controlli vengono eseguiti localmente - nessun dato lascia il tuo dispositivo.",
+    "surfsec": {
+      "title": "SurfSec Intelligence",
+      "subtitle": "External Attack Surface Management",
+      "description": "Piattaforma enterprise automatizzata di security intelligence. Sviluppata in Python e Streamlit, aiuta le agenzie digitali a identificare proattivamente le vulnerabilità nei siti dei loro clienti.",
       "features": {
-        "title": "Cosa Controlliamo",
+        "title": "Funzionalità Principali",
         "items": [
-          "Stato della connessione HTTPS crittografata",
-          "Sicurezza e permessi dei cookie",
-          "Configurazione Do Not Track (DNT)",
-          "Firme di rilevamento bot/automazione",
-          "Integrità del display e viewport",
-          "Proprietà della connessione di rete",
-          "Impostazioni lingua e localizzazione"
+          "Validazione e tracciamento certificati SSL",
+          "Analisi completa degli header di sicurezza",
+          "Rilevamento file sensibili esposti (.env, .git)",
+          "Crawler intelligente per portfolio agenzie",
+          "Sistema automatizzato di email per outreach",
+          "Report di sicurezza professionali in HTML",
+          "Telemetria anonima GDPR-compliant"
         ]
       },
-      "disclaimer": "Questo scanner è a scopo educativo. Dimostra tecniche di analisi della sicurezza basate sul browser.",
-      "backToProjects": "Torna ai Progetti"
+      "disclaimer": "Questa è un'applicazione backend Python e non può essere eseguita direttamente nel browser. Il codice sorgente è disponibile nella cartella del progetto.",
+      "backToProjects": "Torna ai Progetti",
+      "viewRepository": "Vedi Codice Sorgente"
     }
   },
   "timeline": {

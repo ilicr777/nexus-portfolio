@@ -56,6 +56,17 @@ const projectConfig = {
     buttonIcon: Clock,
     status: "coming" as const,
   },
+  surfsec: {
+    icon: Shield,
+    gradient: "from-cyan-500/20 to-blue-500/20",
+    accent: "group-hover:text-cyan-400",
+    iconBg: "bg-cyan-500/10",
+    link: "/projects/surfsec",
+    linkType: "internal" as const,
+    buttonText: "Case Study 🔍",
+    buttonIcon: Shield,
+    status: "live" as const,
+  },
 };
 
 type ProjectKey = keyof typeof projectConfig;
@@ -67,7 +78,7 @@ export default function ProjectsPage() {
   const gridRef = useRef(null);
   const isGridInView = useInView(gridRef, { once: true });
 
-  const projectKeys: ProjectKey[] = ["copycraft", "menutranslator", "secureguard", "nexuscommerce"];
+  const projectKeys: ProjectKey[] = ["copycraft", "menutranslator", "surfsec", "secureguard", "nexuscommerce"];
 
   return (
     <PageTransition>

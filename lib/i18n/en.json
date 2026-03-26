@@ -117,10 +117,10 @@
         "description": "Scalable e-commerce platform with microservices architecture and secure payments.",
         "tags": ["React", "Node.js", "Stripe"]
       },
-      "securityscanner": {
-        "title": "Security Scanner",
-        "description": "Real-time browser security analyzer. Checks HTTPS, privacy settings, bot detection, and more.",
-        "tags": ["TypeScript", "Cybersecurity", "Client-Side"]
+      "surfsec": {
+        "title": "SurfSec Intelligence",
+        "description": "Enterprise-grade External Attack Surface Management platform for digital agencies.",
+        "tags": ["Python", "FastAPI", "Streamlit", "Cybersecurity"]
       }
     }
   },
@@ -277,24 +277,25 @@
         }
       }
     },
-    "securityScanner": {
-      "title": "Security Posture Scanner",
-      "subtitle": "Real-time browser security analysis",
-      "description": "This tool analyzes your browser's security configuration, privacy settings, and potential vulnerabilities. All checks run locally - no data leaves your device.",
+    "surfsec": {
+      "title": "SurfSec Intelligence",
+      "subtitle": "External Attack Surface Management",
+      "description": "Enterprise-grade automated security intelligence platform. Built with Python and Streamlit, it helps digital agencies proactively identify vulnerabilities in their clients' web properties before attackers do.",
       "features": {
-        "title": "What We Check",
+        "title": "Core Capabilities",
         "items": [
-          "HTTPS connection encryption status",
-          "Cookie security and permissions",
-          "Do Not Track (DNT) configuration",
-          "Bot/automation detection signatures",
-          "Display and viewport integrity",
-          "Network connection properties",
-          "Locale and language settings"
+          "SSL & Certificate Validation Tracking",
+          "Comprehensive Security Headers Assessment",
+          "Sensitive File Exposure Detection (.env, .git)",
+          "Intelligent Agency Portfolio Crawler",
+          "Automated Branded Outreach System",
+          "Professional HTML Security Reports",
+          "GDPR-Compliant Anonymous Telemetry"
         ]
       },
-      "disclaimer": "This scanner is for educational purposes. It demonstrates browser-based security analysis techniques.",
-      "backToProjects": "Back to Projects"
+      "disclaimer": "This is a backend Python application and cannot be run directly in the browser. The source code is available in the repository.",
+      "backToProjects": "Back to Projects",
+      "viewRepository": "View Code Repository"
     }
   },
   "timeline": {

@@ -72,13 +72,13 @@ const projectConfig = {
     buttonIcon: Clock,
     status: "coming" as const,
   },
-  securityscanner: {
+  surfsec: {
     icon: Scan,
     gradient: "from-cyan-500/20 to-blue-500/20",
     accent: "group-hover:text-cyan-400",
-    link: "/projects/security-scanner",
+    link: "/projects/surfsec",
     linkType: "internal" as const,
-    buttonText: "Try Scanner 🔒",
+    buttonText: "Case Study 🔍",
     buttonIcon: Shield,
     status: "live" as const,
   },
@@ -91,7 +91,7 @@ export function Projects() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const { dictionary } = useDictionary();
 
-  const projectKeys: ProjectKey[] = ["copycraft", "menutranslator", "securityscanner", "secureguard", "nexuscommerce"];
+  const projectKeys: ProjectKey[] = ["copycraft", "menutranslator", "surfsec", "secureguard", "nexuscommerce"];
 
   return (
     <section
