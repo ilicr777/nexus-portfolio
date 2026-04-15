@@ -74,12 +74,12 @@ const config: Config = {
           to: { height: "0" },
         },
         marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
+          "0%": { transform: "translate3d(0, 0, 0)" },
+          "100%": { transform: "translate3d(-100%, 0, 0)" },
         },
         "marquee-reverse": {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(0%)" },
+          "0%": { transform: "translate3d(-100%, 0, 0)" },
+          "100%": { transform: "translate3d(0, 0, 0)" },
         },
         shimmer: {
           "0%": { backgroundPosition: "-200% 0" },
@@ -119,7 +119,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
 };
 
 export default config;

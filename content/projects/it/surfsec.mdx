@@ -1,0 +1,60 @@
+---
+title: "SurfSec Intelligence"
+subtitle: "External Attack Surface Management"
+description: "Piattaforma automatizzata di sicurezza enterprise. Sviluppata in Python e Streamlit per aiutare le agenzie digitali a identificare proattivamente le vulnerabilità dei clienti prima che lo facciano gli attaccanti."
+techStack: ["Python 3.11+", "FastAPI", "Supabase", "Streamlit UI"]
+status: "Pronto per la Produzione"
+systemStatus: "Sistemi Online"
+---
+
+## Problem Statement & Constraints
+
+Le agenzie digitali spesso gestiscono decine di siti web dei clienti ma mancano delle risorse per monitorare continuamente nuove minacce alla sicurezza, derive di configurazione o file sensibili esposti. Affidarsi ad audit manuali è dispendioso in termini di tempo e soggetto a errori, lasciando i clienti vulnerabili ad attacchi automatizzati.
+
+I vincoli principali erano:
+- **Scalabilità**: Il sistema deve scoprire autonomamente i target partendo dall'URL del portfolio di un'agenzia.
+- **Non-Intrusivo**: La scansione deve essere passiva o affidarsi a richieste HTTP sicure per evitare di innescare WAF o causare downtime.
+- **Azione Immediata**: L'output non deve limitarsi a elencare le CVE, ma fornire bozze di email, contestualizzate per il brand, in modo che i proprietari delle agenzie possano contattare immediatamente i loro clienti.
+
+## Architecture Design
+
+Il sistema centrale utilizza un'architettura disaccoppiata. Un backend Python gestisce il crawling e la scansione, mentre un modulo separato aggrega la telemetria in Supabase.
+
+<Mermaid chart={`
+graph TD
+    A[URL Portfolio Agenzia] -->|Input| B(Portfolio Scout);
+    B -->|Estrazione URL| C{Core Scanner di Sicurezza};
+    
+    C -->|Controllo SSL| D[Validatore Certificati];
+    C -->|Headers| E[Analizzatore Header];
+    C -->|File Esposti| F[Motore di Fuzzing];
+    
+    D --> G[(Telemetria Supabase)];
+    E --> G;
+    F --> G;
+
+    G -->|Dati Aggregati| H[Motore di Reporting];
+    H -->|HTML + Jinja2| I[Sistema Invio Email];
+    
+    classDef cyber fill:#0f172a,stroke:#06b6d4,stroke-width:2px,color:#fff;
+    class A,B,C,D,E,F,G,H,I cyber;
+`} />
+
+### Moduli Principali
+1. **Portfolio Scout (BeautifulSoup4)**: Esegue il crawling dei siti web delle agenzie per scoprire in modo dinamico i target associati.
+2. **Scanner di Sicurezza (Requests Core)**: Valida l'SSL, verifica gli header di sicurezza ed individua file esposti (es. `.env`, `.git`).
+3. **Telemetria & DB (Supabase)**: Memorizza i punteggi di rischio aggregati e resi anonimi nel pieno rispetto del GDPR.
+4. **Actionable Output (Jinja2 + SMTP)**: Genera report HTML e bozze di email per outreach altamente contestualizzato.
+
+## Technical Trade-offs
+
+- **Python vs Go**: Sebbene Go avrebbe offerto velocità di concorrenza superiori per lo scanner, Python è stato scelto per sfruttare il suo vasto ecosistema di librerie di sicurezza e web-scraping (`BeautifulSoup`, `tldextract`, `OpenSSL`), accelerando così il time-to-market.
+- **Supabase vs PostgreSQL Locale**: Si è optato per Supabase gestito rispetto a un PostgreSQL self-hosted, per semplificare il dimensionamento e poter contare sulla row-level security (RLS) integrata per strutture dati multi-tenant, compensando ampiamente il modesto rischio di vendor lock-in.
+
+## Performance & Metrics
+
+L'ottimizzazione del motore di richieste asincrono ha portato notevoli benefici nelle metriche di sistema:
+
+- **Velocità di Scansione**: Il tempo medio per effettuare la scansione di un portfolio (50+ domini) è sceso da 12 minuti a **meno di 45 secondi** mediante interfacce I/O asincrone (`aiohttp`).
+- **Falsi Positivi**: Grazie ad euristiche personalizzate, gli allarmi di file `.env` esposti infondati sono scesi del **92%**.
+- **Delivery Rate**: L'ottimizzazione dei report HTML porta un'accuratezza costante di visualizzazione del **100%** sui moderni client mail (Gmail, Outlook).

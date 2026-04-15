@@ -14,6 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nexus.dev"),
   title: "NEXUS.dev | Freelance Full-Stack Developer",
   description:
     "Building the web of tomorrow, today. Freelance Full-Stack Developer delivering pixel-perfect, high-performance digital experiences.",

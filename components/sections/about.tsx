@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useDictionary } from "@/components/dictionary-provider";
 
 interface TechIcon {
@@ -31,35 +31,67 @@ const techStack: TechIcon[] = [
 ];
 
 export function TechMarquee({ direction = "left" }: { direction?: "left" | "right" }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollerRef = useRef<HTMLDivElement>(null);
+  const [numClones, setNumClones] = useState(1);
+
+  useEffect(() => {
+    const calculateClones = () => {
+      if (!containerRef.current || !scrollerRef.current) return;
+      const containerWidth = containerRef.current.clientWidth;
+      const scrollerWidth = scrollerRef.current.clientWidth;
+      
+      if (scrollerWidth === 0) return;
+      
+      const needed = Math.max(1, Math.ceil(containerWidth / scrollerWidth));
+      if (needed !== numClones) {
+        setNumClones(needed);
+      }
+    };
+
+    calculateClones();
+    
+    let resizeObserver: ResizeObserver | null = null;
+    if (typeof window !== "undefined" && "ResizeObserver" in window) {
+      resizeObserver = new ResizeObserver(calculateClones);
+      if (containerRef.current) resizeObserver.observe(containerRef.current);
+      if (scrollerRef.current) resizeObserver.observe(scrollerRef.current);
+    }
+    
+    return () => {
+      if (resizeObserver) resizeObserver.disconnect();
+    };
+  }, [numClones]);
+
+  const techItems = techStack.map((tech) => (
+    <div
+      key={tech.name}
+      className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft hover:shadow-soft-lg hover:border-primary/40 transition-all duration-300 cursor-default whitespace-nowrap transform-gpu"
+    >
+      <span className="text-xl">{tech.icon}</span>
+      <span className="text-sm font-medium text-muted-foreground">
+        {tech.name}
+      </span>
+    </div>
+  ));
+
+  const marqueeClasses = `flex shrink-0 gap-8 md:gap-12 pr-8 md:pr-12 animate-marquee group-hover:[animation-play-state:paused] motion-reduce:[animation-play-state:paused] ${
+    direction === "right" ? "animate-marquee-reverse" : ""
+  }`;
+
   return (
-    <div className="flex overflow-hidden">
-      <motion.div
-        className="flex gap-8 md:gap-12"
-        animate={{
-          x: direction === "left" ? ["0%", "-50%"] : ["-50%", "0%"],
-        }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: "loop",
-            duration: 30,
-            ease: "linear",
-          },
-        }}
-      >
-        {/* Duplicate items for seamless loop */}
-        {[...techStack, ...techStack].map((tech, index) => (
-          <div
-            key={`${tech.name}-${index}`}
-            className="flex items-center gap-3 px-6 py-3 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft hover:shadow-soft-lg hover:border-primary/40 transition-all duration-300 cursor-default whitespace-nowrap"
-          >
-            <span className="text-xl">{tech.icon}</span>
-            <span className="text-sm font-medium text-muted-foreground">
-              {tech.name}
-            </span>
-          </div>
-        ))}
-      </motion.div>
+    <div ref={containerRef} className="flex w-full overflow-hidden group">
+      {/* Container Originale */}
+      <div ref={scrollerRef} className={marqueeClasses}>
+        {techItems}
+      </div>
+
+      {/* Cloni Dinamici (Minimo 1) */}
+      {Array.from({ length: numClones }).map((_, i) => (
+        <div key={`clone-${i}`} aria-hidden="true" className={marqueeClasses}>
+          {techItems}
+        </div>
+      ))}
     </div>
   );
 }
