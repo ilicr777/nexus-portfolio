@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="nexus" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="cyber" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="64" fill="#030712" />
+  <rect x="8" y="8" width="240" height="240" rx="56" fill="url(#cyber)" fill-opacity="0.2" stroke="url(#nexus)" stroke-width="4" />
+  <text x="50%" y="54%" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="124" fill="url(#nexus)" text-anchor="middle" dominant-baseline="middle" letter-spacing="-4">NX</text>
+</svg>
