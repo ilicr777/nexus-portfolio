@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 
-export default function ServicesPage({ params }: { params: { locale: string } }) {
+export default function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { dictionary, locale } = useDictionary();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
