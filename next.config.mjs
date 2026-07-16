@@ -78,8 +78,10 @@ const nextConfig = {
   // Transpile react-email packages for compatibility
   transpilePackages: [
     "@react-email/components",
-    "@react-email/render",
   ],
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
   
   // Security: Disable x-powered-by header
   poweredByHeader: false,
