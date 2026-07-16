@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 40% 98%; /* Off-white molto morbido */
+    --foreground: 240 10% 15%; /* Antracite profondo (meno affaticante del nero puro) */
+    --card: 0 0% 100%;         /* Bianco puro per staccare dal fondo */
+    --card-foreground: 240 10% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 15%;
+    --primary: 221 83% 53%;    /* Blu vibrante B2B moderno */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 96%;  /* Grigio freddo leggerissimo */
+    --secondary-foreground: 240 10% 20%;
+    --muted: 210 20% 96%;
+    --muted-foreground: 240 5% 45%; 
+    --accent: 210 40% 96%;
+    --accent-foreground: 240 10% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 6% 90%;      /* Bordi delicatissimi */
+    --input: 240 6% 90%;
+    --ring: 221 83% 53%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 10% 4%;  /* Antracite quasi nero */
+    --foreground: 0 0% 95%;    /* Bianco sporco (non #fff puro) */
+    --card: 240 10% 6%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 10% 6%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 240 4% 16%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 221 83% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-500 ease-in-out antialiased;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass {
+    @apply bg-background/80 backdrop-blur-xl border border-border/50;
+  }
+
+  .glass-dark {
+    @apply bg-background/60 backdrop-blur-xl border border-white/10;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-blue-400 to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient;
+  }
+
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-[0_0_30px_rgba(59,130,246,0.3)];
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Selection */
+::selection {
+  background: hsl(var(--primary) / 0.3);
+  color: hsl(var(--foreground));
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CLEAN MICRO-INTERACTIONS (Replaced Cyberpunk)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Smooth fade for text (was Glitch Effect) */
+.glitch {
+  position: relative;
+  transition: opacity 0.3s ease;
+}
+
+.glitch:hover {
+  opacity: 0.8;
+}
+
+/* Soft Glow Button (was Neon Glow) */
+.btn-cyber {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-cyber:hover {
+  box-shadow: 
+    0 0 15px hsl(var(--primary) / 0.2),
+    0 4px 10px hsl(var(--primary) / 0.1);
+  transform: translateY(-1px);
+}
+
+/* Clean Card Hover (was Cyberpunk Card) */
+.card-cyber {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.card-cyber:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 30px -10px hsl(var(--primary) / 0.1),
+    0 0 10px hsl(var(--primary) / 0.05);
+  border-color: hsl(var(--primary) / 0.3);
+}
+
+/* Soft pulse line (was Scanline) */
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.scanline::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.3), transparent);
+  animation: pulse-line 3s ease-in-out infinite;
+  opacity: 0.5;
+}
+
+@keyframes pulse-line {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.8; }
+}
+
+/* Terminal Cursor Blink */
+.cursor-blink::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: hsl(var(--primary));
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Matrix Rain Background (for containers) - Cleaned up to be minimal */
+.matrix-bg {
+  position: relative;
+}
+
+.matrix-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(hsl(var(--primary) / 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Holographic Shimmer - Reduced intensity */
+.holographic {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 0.05) 0%,
+    hsl(var(--primary) / 0.1) 50%,
+    hsl(var(--primary) / 0.05) 100%
+  );
+  background-size: 200% 200%;
+  animation: holographic-shift 8s ease infinite;
+}
+
+@keyframes holographic-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Cyber Border Animation - Cleaned to soft corners */
+.cyber-border {
+  position: relative;
+}
+
+.cyber-border::before,
+.cyber-border::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid hsl(var(--primary) / 0.5);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.cyber-border::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.cyber-border::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.cyber-border:hover::before,
+.cyber-border:hover::after {
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+}
+
+/* Data Stream Effect - Replaced with minimal gradient */
+.data-stream {
+  background: linear-gradient(to bottom, transparent, hsl(var(--primary) / 0.02), transparent);
+}
