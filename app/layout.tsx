@@ -14,7 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://nexus.dev"),
+  metadataBase: new URL("https://www.nexus-dev.it"),
   title: "NEXUS.dev | Freelance Full-Stack Developer",
   description:
     "Building the web of tomorrow, today. Freelance Full-Stack Developer delivering pixel-perfect, high-performance digital experiences.",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "it_IT",
-    url: "https://nexus.dev",
+    url: "https://www.nexus-dev.it",
     title: "NEXUS.dev | Freelance Full-Stack Developer",
     description:
       "Building the web of tomorrow, today. Freelance Full-Stack Developer delivering pixel-perfect, high-performance digital experiences.",
