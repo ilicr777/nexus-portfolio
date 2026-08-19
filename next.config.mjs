@@ -75,6 +75,8 @@ const securityHeaders = [
 ];
 
 const nextConfig = {
+  trailingSlash: false,
+
   // Transpile react-email packages for compatibility
   transpilePackages: [
     "@react-email/components",

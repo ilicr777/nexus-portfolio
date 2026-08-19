@@ -73,7 +73,9 @@ export function middleware(request: NextRequest) {
   const acceptLanguage = request.headers.get("Accept-Language");
   const preferredLocale = getPreferredLocale(acceptLanguage);
 
-  const newUrl = new URL(`/${preferredLocale}${pathname}${request.nextUrl.search}`, request.url);
+  // Evita trailing slash su redirect root locale (es. / -> /it invece di /it/)
+  const redirectPathname = pathname === "/" ? `/${preferredLocale}` : `/${preferredLocale}${pathname}`;
+  const newUrl = new URL(`${redirectPathname}${request.nextUrl.search}`, request.url);
   
   return NextResponse.redirect(newUrl);
 }

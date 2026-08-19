@@ -40,8 +40,12 @@ export async function generateMetadata(): Promise<Metadata> {
 
   languages["x-default"] = genericPath === "/" || genericPath === "" ? `/${i18n.defaultLocale}` : `/${i18n.defaultLocale}/${genericPath}`;
 
+  // Canonical URL normalized to avoid trailing slashes
+  const cleanPathname = rawPathname.endsWith("/") && rawPathname.length > 1 ? rawPathname.slice(0, -1) : rawPathname;
+
   return {
     alternates: {
+      canonical: `https://www.nexus-dev.it${cleanPathname}`,
       languages,
     },
   };
