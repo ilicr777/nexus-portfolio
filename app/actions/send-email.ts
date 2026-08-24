@@ -89,7 +89,7 @@ export async function sendContactEmail(formData: ContactFormData): Promise<SendE
     const { error: autoReplyError } = await resend.emails.send({
       from: fromEmail,
       to: email,
-      subject: "Grazie per aver contattato Nexus!",
+      subject: "Grazie per aver contattato NEXUS.dev!",
       react: AutoReplyEmail({ name }),
     });
 
