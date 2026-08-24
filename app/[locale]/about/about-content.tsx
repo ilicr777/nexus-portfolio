@@ -62,33 +62,22 @@ export function AboutContent() {
           <div className="container-padding mx-auto max-w-7xl">
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
               
-              {/* Premium Founder Card Image */}
+              {/* Founder Image */}
               <ScrollReveal direction="left" delay={0.2}>
                 <div className="relative flex justify-center lg:justify-start">
                   <FloatingElement duration={6} distance={10}>
-                    <div className="relative group p-[2px] rounded-[2.5rem] overflow-hidden shadow-2xl">
-                      {/* Animated Gradient Border */}
-                      <span className="absolute inset-[-1000%] animate-[spin_5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)] opacity-50 group-hover:opacity-100 transition-opacity duration-700 dark:bg-[conic-gradient(from_90deg_at_50%_50%,#000000_0%,#393BB2_50%,#000000_100%)]" />
-                      
+                    <div className="relative rounded-[2.5rem] overflow-hidden border border-border/50 bg-card/50 shadow-2xl">
                       {/* Image Container */}
-                      <div className="relative w-72 h-80 md:w-80 md:h-[22rem] lg:w-[26rem] lg:h-[30rem] rounded-[2.4rem] overflow-hidden bg-background">
-                        <div className="absolute inset-0 bg-foreground/10 z-10 mix-blend-overlay group-hover:bg-transparent transition-colors duration-700" />
+                      <div className="relative w-72 h-80 md:w-80 md:h-[22rem] lg:w-[26rem] lg:h-[30rem] overflow-hidden bg-background">
                         <Image
                           src="/profile.jpg"
                           alt={dictionary.about.profileAlt}
                           fill
-                          className="object-cover scale-105 group-hover:scale-100 transition-transform duration-700 filter grayscale-[20%] group-hover:grayscale-0"
+                          className="object-cover scale-105 group-hover:scale-100 transition-transform duration-700 filter grayscale-[15%] hover:grayscale-0"
                           priority
                         />
-                        {/* Overlay Gradient */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent z-20" />
-                        
-                        {/* Floating Badge inside Image */}
-                        <div className="absolute bottom-6 left-6 right-6 z-30 flex justify-center">
-                          <div className="px-6 py-3 rounded-2xl bg-background/60 backdrop-blur-md border border-white/10 shadow-lg">
-                            <p className="text-sm font-mono text-primary font-bold tracking-widest uppercase">FOUNDER & ENGINEER</p>
-                          </div>
-                        </div>
+                        {/* Subtle bottom gradient */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent pointer-events-none" />
                       </div>
                     </div>
                   </FloatingElement>

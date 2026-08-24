@@ -152,10 +152,10 @@ export function Contact() {
                     <div>
                       <h4 className="font-medium">{dictionary.contact.info.email}</h4>
                       <a
-                        href="mailto:nexus.dev.contact@gmail.com"
+                        href="mailto:info@nexus-dev.it"
                         className="text-sm text-muted-foreground hover:text-primary transition-colors"
                       >
-                        nexus.dev.contact@gmail.com
+                        info@nexus-dev.it
                       </a>
                     </div>
                   </div>

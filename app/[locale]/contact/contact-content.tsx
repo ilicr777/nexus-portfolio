@@ -33,8 +33,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "nexus.dev.contact@gmail.com",
-    href: "mailto:nexus.dev.contact@gmail.com",
+    value: "info@nexus-dev.it",
+    href: "mailto:info@nexus-dev.it",
   },
   {
     icon: Clock,

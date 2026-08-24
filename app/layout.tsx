@@ -46,6 +46,13 @@ export const metadata: Metadata = {
       "Building the web of tomorrow, today. Freelance Full-Stack Developer delivering pixel-perfect, high-performance digital experiences.",
     creator: "@nexusdev",
   },
+  icons: {
+    icon: [
+      { url: "/icon.png", sizes: "any" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-icon.png",
+  },
   robots: {
     index: true,
     follow: true,

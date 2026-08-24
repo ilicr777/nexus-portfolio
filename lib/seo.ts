@@ -17,7 +17,7 @@ export function constructMetadata({
   description,
   path = "",
   locale,
-  image = "/icon.svg",
+  image = "/icon.png",
   noIndex = false,
 }: SEOProps): Metadata {
   // Normalize path without trailing slash
@@ -45,6 +45,13 @@ export function constructMetadata({
     title: fullTitle,
     description,
     metadataBase: new URL(SITE_URL),
+    icons: {
+      icon: [
+        { url: "/icon.png", sizes: "any" },
+        { url: "/favicon.ico", sizes: "any" },
+      ],
+      apple: "/apple-icon.png",
+    },
     alternates: {
       canonical: canonicalUrl,
       languages,
