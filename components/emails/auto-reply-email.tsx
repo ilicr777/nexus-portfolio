@@ -67,11 +67,9 @@ export function AutoReplyEmail({ name }: AutoReplyEmailProps) {
               Questa è un&apos;email automatica inviata in risposta al tuo messaggio.
             </Text>
             <Text style={footerLinks}>
-              <Link href="https://nexus.dev" style={link}>Website</Link>
+              <Link href="https://www.nexus-dev.it" style={link}>Website</Link>
               {" • "}
-              <Link href="https://github.com/nexusdev" style={link}>GitHub</Link>
-              {" • "}
-              <Link href="https://linkedin.com/in/nexusdev" style={link}>LinkedIn</Link>
+              <Link href="https://github.com/ilicr777" style={link}>GitHub</Link>
             </Text>
           </Section>
         </Container>
