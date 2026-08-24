@@ -51,7 +51,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100dvh] flex flex-col justify-between items-center overflow-hidden"
     >
       {/* Background Elements - Clean & Premium */}
       <div className="absolute inset-0 -z-10 bg-background pointer-events-none">
@@ -71,7 +71,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--foreground))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--foreground))_1px,transparent_1px)] bg-[size:3rem_3rem] sm:bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,#000_10%,transparent_80%)] opacity-[0.03]" />
       </div>
 
-      <div className="container-padding mx-auto max-w-7xl pt-28 pb-16 sm:pt-32 sm:pb-24 md:pt-36 md:pb-28">
+      <div className="container-padding mx-auto max-w-7xl pt-24 pb-8 sm:pt-32 sm:pb-12 md:pt-36 flex-1 flex flex-col justify-center items-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -141,26 +141,26 @@ export function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll Indicator - Desktop Only to prevent overlap on mobile */}
+      {/* Scroll Indicator - Visible & responsive on all screens */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.5 }}
-        className="hidden md:flex absolute bottom-8 lg:bottom-10 left-1/2 -translate-x-1/2"
+        transition={{ delay: 1.2 }}
+        className="pb-6 sm:pb-8 flex justify-center w-full z-10"
       >
         <motion.div
-          animate={{ y: [0, 8, 0] }}
+          animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="flex flex-col items-center gap-3"
+          className="flex flex-col items-center gap-2 sm:gap-3"
         >
-          <span className="text-xs text-muted-foreground/60 uppercase tracking-widest font-medium">
+          <span className="text-[10px] sm:text-xs text-muted-foreground/60 uppercase tracking-widest font-medium">
             {dictionary.hero.scroll}
           </span>
-          <div className="w-5 h-8 rounded-full border border-muted-foreground/30 flex justify-center pt-1.5">
+          <div className="w-4 h-7 sm:w-5 sm:h-8 rounded-full border border-muted-foreground/30 flex justify-center pt-1.5">
             <motion.div
-              animate={{ y: [0, 10, 0], opacity: [1, 0.5, 1] }}
+              animate={{ y: [0, 8, 0], opacity: [1, 0.5, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1.5 h-1.5 rounded-full bg-primary/60"
+              className="w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full bg-primary/60"
             />
           </div>
         </motion.div>
