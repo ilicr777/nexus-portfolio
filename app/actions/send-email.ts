@@ -55,23 +55,22 @@ export async function sendContactEmail(formData: ContactFormData): Promise<SendE
       };
     }
 
-    const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
+    const adminEmail =
+      process.env.NEXT_PUBLIC_ADMIN_EMAIL ||
+      process.env.ADMIN_EMAIL ||
+      "info@nexus-dev.it";
 
-    if (!adminEmail) {
-      console.error("NEXT_PUBLIC_ADMIN_EMAIL is not configured");
-      return {
-        success: false,
-        message: "Errore di configurazione del server. Riprova più tardi.",
-      };
-    }
+    const fromEmail =
+      process.env.RESEND_FROM_EMAIL ||
+      "Portfolio Contact <onboarding@resend.dev>";
 
     // Send notification email to admin
     const { error: adminEmailError } = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+      from: fromEmail,
       to: adminEmail,
       replyTo: email,
-      subject: subject 
-        ? `Nuovo messaggio dal Portfolio: ${subject}` 
+      subject: subject
+        ? `Nuovo messaggio dal Portfolio: ${subject}`
         : `Nuovo messaggio dal Portfolio di ${name}`,
       react: ContactFormEmail({ name, email, message }),
     });
@@ -80,13 +79,15 @@ export async function sendContactEmail(formData: ContactFormData): Promise<SendE
       console.error("Error sending admin email:", adminEmailError);
       return {
         success: false,
-        message: "Errore nell'invio dell'email. Riprova più tardi.",
+        message:
+          adminEmailError.message ||
+          "Errore nell'invio dell'email. Riprova più tardi.",
       };
     }
 
     // Send auto-reply email to user
     const { error: autoReplyError } = await resend.emails.send({
-      from: "NEXUS.dev <onboarding@resend.dev>",
+      from: fromEmail,
       to: email,
       subject: "Grazie per aver contattato Nexus!",
       react: AutoReplyEmail({ name }),
