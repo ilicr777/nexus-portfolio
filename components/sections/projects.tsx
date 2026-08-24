@@ -89,7 +89,7 @@ type ProjectKey = keyof typeof projectConfig;
 export function Projects() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const { dictionary } = useDictionary();
+  const { dictionary, locale } = useDictionary();
 
   const projectKeys: ProjectKey[] = ["copycraft", "menutranslator", "surfsec", "secureguard", "nexuscommerce"];
 
@@ -229,7 +229,7 @@ export function Projects() {
                             size="sm"
                             className="gap-2"
                           >
-                            <Link href={config.link!}>
+                            <Link href={`/${locale}${config.link!}`}>
                               <ButtonIcon className="h-4 w-4" />
                               {config.buttonText}
                             </Link>

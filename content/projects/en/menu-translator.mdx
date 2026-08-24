@@ -41,7 +41,7 @@ sequenceDiagram
 ## Technical Trade-offs
 
 1. **Google Vision API vs Tesseract.js (Client-side):** 
-   While `Tesseract.js` would have saved server costs and preserved data privacy, performing OCR on heavy images strained lower-end mobile devices and severely bloated the initial JavaScript payload. The Google Cloud Vision API was selected to offload heavy computation, guaranteeing <1s text extraction, at the cost of a strictly monitored API quota.
+   While `Tesseract.js` would have saved server costs and preserved data privacy, performing OCR on heavy images strained lower-end mobile devices and severely bloated the initial JavaScript payload. The Google Cloud Vision API was selected to offload heavy computation, guaranteeing under 1s text extraction, at the cost of a strictly monitored API quota.
    
 2. **GPT-4o vs Llama 3 (Self-Hosted):**
    A self-hosted LLM on a dedicated GPU instance would theoretically reduce per-request costs. However, given variable daily traffic patterns (zero traffic at night, spikes during lunch/dinner hours), maintaining idle GPUs was not financially viable. The Serverless OpenAI integration proved cheaper dynamically.

@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion, useInView } from "framer-motion";
@@ -37,18 +38,18 @@ const itemVariants = {
   },
 };
 
-function ServiceCard({ service, index }: { service: Service, index: number }) {
+function ServiceCard({ service, index, locale }: { service: Service; index: number; locale: string }) {
   // Use slightly different gradients for each card
   const gradients = [
     "from-blue-500/10 via-cyan-500/5",
     "from-red-500/10 via-orange-500/5",
-    "from-emerald-500/10 via-green-500/5"
+    "from-emerald-500/10 via-green-500/5",
   ];
   
   const colors = [
     "text-blue-500 group-hover:text-blue-400 group-hover:bg-blue-500/10",
     "text-red-500 group-hover:text-red-400 group-hover:bg-red-500/10",
-    "text-emerald-500 group-hover:text-emerald-400 group-hover:bg-emerald-500/10"
+    "text-emerald-500 group-hover:text-emerald-400 group-hover:bg-emerald-500/10",
   ];
 
   return (
@@ -75,8 +76,8 @@ function ServiceCard({ service, index }: { service: Service, index: number }) {
           {service.description}
         </p>
 
-        {/* Features */}
-        <ul className="space-y-3">
+        {/* Features List */}
+        <ul className="space-y-3 mb-8">
           {service.features.map((feature) => (
             <li
               key={feature}
@@ -91,7 +92,7 @@ function ServiceCard({ service, index }: { service: Service, index: number }) {
         {/* Link */}
         <div className="mt-8 pt-8 border-t border-border/40">
           <Link
-            href="/services"
+            href={`/${locale}/services`}
             className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:gap-3 transition-all duration-300 group/link"
           >
             {service.learnMore}
@@ -106,7 +107,7 @@ function ServiceCard({ service, index }: { service: Service, index: number }) {
 export function Services() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const { dictionary } = useDictionary();
+  const { dictionary, locale } = useDictionary();
 
   const services: Service[] = [
     {
@@ -133,15 +134,10 @@ export function Services() {
   ];
 
   return (
-    <section
-      id="services"
-      className="section-padding relative overflow-hidden"
-      ref={ref}
-    >
-      {/* Background Elements */}
+    <section className="section-padding relative overflow-hidden" ref={ref}>
+      {/* Background Decor */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-0 right-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[100px]" />
-        <div className="absolute bottom-1/4 left-0 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[140px]" />
       </div>
 
       <div className="container-padding mx-auto max-w-7xl">
@@ -150,23 +146,29 @@ export function Services() {
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
-          {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-20">
-            <span className="text-sm font-semibold text-primary/80 uppercase tracking-widest">
+          {/* Header */}
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <motion.div variants={itemVariants} className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/40 bg-card/40 backdrop-blur-xl text-sm font-semibold text-primary/80 uppercase tracking-widest shadow-sm mb-6">
               {dictionary.services.label}
-            </span>
-            <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter text-foreground text-balance">
+            </motion.div>
+            <motion.h2
+              variants={itemVariants}
+              className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter"
+            >
               {dictionary.services.title}
-            </h2>
-            <p className="mt-6 text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+            </motion.h2>
+            <motion.p
+              variants={itemVariants}
+              className="mt-6 text-xl text-muted-foreground font-light leading-relaxed"
+            >
               {dictionary.services.description}
-            </p>
-          </motion.div>
+            </motion.p>
+          </div>
 
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {/* Grid of 3 Core Services */}
+          <div className="grid md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <ServiceCard key={service.title} service={service} index={index} />
+              <ServiceCard key={service.title} service={service} index={index} locale={locale} />
             ))}
           </div>
 
@@ -181,7 +183,7 @@ export function Services() {
             <div className="inline-flex relative group p-[1px] rounded-full overflow-hidden">
               <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className="relative inline-flex items-center justify-center gap-3 h-14 px-8 rounded-full bg-card/90 backdrop-blur-xl border border-border/50 text-foreground font-medium hover:bg-background transition-all"
               >
                 {dictionary.services.cta.link}

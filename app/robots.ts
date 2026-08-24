@@ -1,11 +1,17 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-    },
-    sitemap: 'https://www.nexus-dev.it/sitemap.xml',
+    rules: [
+      {
+        userAgent: "*",
+        allow: "/",
+        disallow: [
+          "/api/",
+          "/_next/static/media/",
+        ],
+      },
+    ],
+    sitemap: "https://www.nexus-dev.it/sitemap.xml",
   };
 }

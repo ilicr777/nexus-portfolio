@@ -1,53 +1,70 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
-const BASE_URL = 'https://www.nexus-dev.it';
-const LOCALES = ['it', 'en'];
+const BASE_URL = "https://www.nexus-dev.it";
+const LOCALES = ["it", "en"] as const;
 
 // Definizione delle rotte statiche pubbliche per ogni locale
 const staticRoutes = [
-  '', // Homepage
-  '/about',
-  '/contact',
-  '/services',
-  '/projects',
-  '/privacy-policy',
-  '/terms-of-service',
+  "", // Homepage
+  "/about",
+  "/services",
+  "/projects",
+  "/contact",
+  "/privacy-policy",
+  "/terms-of-service",
 ];
 
-// Definizione dei progetti statici (slug reali)
+// Definizione dei progetti
 const projectSlugs = [
-  'copycraft',
-  'menu-translator',
-  'surfsec',
+  "copycraft",
+  "menu-translator",
+  "surfsec",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  // Genera sitemap per tutte le locales e rotte statiche
-  LOCALES.forEach((locale) => {
-    staticRoutes.forEach((route) => {
-      const path = route === '' ? `/${locale}` : `/${locale}${route}`;
+  // 1. Genera sitemap per tutte le rotte statiche per ciascun locale
+  for (const locale of LOCALES) {
+    for (const route of staticRoutes) {
+      const path = route === "" ? `/${locale}` : `/${locale}${route}`;
       
-      entries.push({
-        url: `${BASE_URL}${path}`,
-        lastModified: new Date(),
-        changeFrequency: route === '' ? 'weekly' : 'monthly',
-        priority: route === '' ? 1 : 0.8,
-      });
-    });
+      const languages: Record<string, string> = {};
+      for (const loc of LOCALES) {
+        languages[loc] = route === "" ? `${BASE_URL}/${loc}` : `${BASE_URL}/${loc}${route}`;
+      }
 
-    // Genera sitemap per i progetti dinamici
-    projectSlugs.forEach((slug) => {
-      const path = `/${locale}/projects/${slug}`;
       entries.push({
         url: `${BASE_URL}${path}`,
         lastModified: new Date(),
-        changeFrequency: 'monthly',
-        priority: 0.7,
+        changeFrequency: route === "" ? "weekly" : "monthly",
+        priority: route === "" ? 1.0 : route === "/projects" || route === "/services" ? 0.9 : 0.8,
+        alternates: {
+          languages,
+        },
       });
-    });
-  });
+    }
+
+    // 2. Genera sitemap per i singoli progetti
+    for (const slug of projectSlugs) {
+      const path = `/${locale}/projects/${slug}`;
+
+      const languages: Record<string, string> = {};
+      for (const loc of LOCALES) {
+        languages[loc] = `${BASE_URL}/${loc}/projects/${slug}`;
+      }
+
+      entries.push({
+        url: `${BASE_URL}${path}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.85,
+        alternates: {
+          languages,
+        },
+      });
+    }
+  }
 
   return entries;
 }
