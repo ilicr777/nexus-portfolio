@@ -52,8 +52,8 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         scrolled
-          ? "glass py-3 shadow-lg shadow-black/5"
-          : "bg-transparent py-5"
+          ? "glass py-2.5 sm:py-3 shadow-lg shadow-black/5"
+          : "bg-transparent py-3.5 sm:py-5"
       )}
     >
       <nav className="container-padding mx-auto max-w-7xl">
@@ -112,6 +112,7 @@ export function Navbar() {
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
               className="relative z-10"
+              aria-label="Toggle navigation menu"
             >
               <AnimatePresence mode="wait">
                 {isOpen ? (
@@ -149,9 +150,9 @@ export function Navbar() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="md:hidden overflow-hidden glass border-t border-border/50"
+            className="md:hidden overflow-hidden glass border-t border-border/50 max-h-[calc(100vh-4.5rem)] overflow-y-auto"
           >
-            <div className="container-padding py-6 space-y-4">
+            <div className="container-padding py-6 space-y-3">
               {navLinks.map((link, index) => {
                 const active = isActive(link.href, link.exact);
                 return (
@@ -159,14 +160,14 @@ export function Navbar() {
                     key={link.href}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
+                    transition={{ delay: index * 0.08 }}
                   >
                     <Link
                       href={link.href}
                       onClick={() => setIsOpen(false)}
                       className={cn(
-                        "block py-2 text-lg font-medium transition-colors",
-                        active ? "text-primary" : "text-foreground hover:text-primary"
+                        "block py-2.5 px-3 rounded-lg text-lg font-medium transition-colors",
+                        active ? "text-primary bg-primary/10" : "text-foreground hover:text-primary hover:bg-muted/40"
                       )}
                     >
                       {link.label}
@@ -177,17 +178,18 @@ export function Navbar() {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.4 }}
-                className="pt-4 flex items-center gap-4"
+                transition={{ delay: 0.35 }}
+                className="pt-3 pb-1 flex items-center gap-4 px-3"
               >
                 <LanguageSwitcher />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
+                transition={{ delay: 0.4 }}
+                className="pt-2"
               >
-                <Button asChild variant="glow" className="w-full mt-4">
+                <Button asChild variant="glow" className="w-full h-12 text-base">
                   <Link href={`/${locale}/contact`} onClick={() => setIsOpen(false)}>
                     {dictionary.nav.startProject}
                   </Link>

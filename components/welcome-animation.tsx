@@ -104,7 +104,7 @@ export function WelcomeAnimation({ onComplete }: WelcomeAnimationProps) {
                 }}
                 className="text-center"
               >
-                <span className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent">
+                <span className="text-4xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-foreground via-foreground to-foreground/70 bg-clip-text text-transparent px-4">
                   {welcomeTexts[currentIndex].text}
                 </span>
               </motion.div>

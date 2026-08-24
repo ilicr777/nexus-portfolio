@@ -144,29 +144,29 @@ export function Contact() {
                 </div>
 
                 {/* Contact Info Cards */}
-                <div className="space-y-4">
-                  <div className="flex items-start gap-4 p-4 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-sm">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary">
+                <div className="space-y-3 sm:space-y-4">
+                  <div className="flex items-start gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-sm">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary shrink-0">
                       <Mail className="h-5 w-5" />
                     </div>
                     <div>
-                      <h4 className="font-medium">{dictionary.contact.info.email}</h4>
+                      <h4 className="font-medium text-sm sm:text-base">{dictionary.contact.info.email}</h4>
                       <a
                         href="mailto:info@nexus-dev.it"
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                        className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors break-all"
                       >
                         info@nexus-dev.it
                       </a>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4 p-4 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-sm">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary">
+                  <div className="flex items-start gap-3.5 sm:gap-4 p-3.5 sm:p-4 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-sm">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary shrink-0">
                       <MessageSquare className="h-5 w-5" />
                     </div>
                     <div>
-                      <h4 className="font-medium">{dictionary.contact.info.responseTime}</h4>
-                      <p className="text-sm text-muted-foreground">
+                      <h4 className="font-medium text-sm sm:text-base">{dictionary.contact.info.responseTime}</h4>
+                      <p className="text-xs sm:text-sm text-muted-foreground">
                         {dictionary.contact.info.responseValue}
                       </p>
                     </div>
@@ -174,16 +174,16 @@ export function Contact() {
                 </div>
 
                 {/* Quick Facts */}
-                <div className="p-6 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft">
-                  <h4 className="font-medium mb-4">{dictionary.contact.expect.title}</h4>
-                  <ul className="space-y-3">
+                <div className="p-5 sm:p-6 rounded-xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft">
+                  <h4 className="font-medium mb-3 sm:mb-4 text-sm sm:text-base">{dictionary.contact.expect.title}</h4>
+                  <ul className="space-y-2.5 sm:space-y-3">
                     {dictionary.contact.expect.items.map((item) => (
                       <li
                         key={item}
-                        className="flex items-center gap-2 text-sm text-muted-foreground"
+                        className="flex items-center gap-2.5 text-xs sm:text-sm text-muted-foreground"
                       >
-                        <CheckCircle className="h-4 w-4 text-primary" />
-                        {item}
+                        <CheckCircle className="h-4 w-4 text-primary shrink-0" />
+                        <span>{item}</span>
                       </li>
                     ))}
                   </ul>
@@ -197,15 +197,15 @@ export function Contact() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="flex flex-col items-center justify-center h-full p-8 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft text-center"
+                  className="flex flex-col items-center justify-center h-full p-6 sm:p-8 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft text-center"
                 >
-                  <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
-                    <CheckCircle className="h-8 w-8 text-primary" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/10 flex items-center justify-center mb-5 sm:mb-6">
+                    <CheckCircle className="h-7 w-7 sm:h-8 sm:w-8 text-primary" />
                   </div>
-                  <h3 className="text-2xl font-semibold mb-2">
+                  <h3 className="text-xl sm:text-2xl font-semibold mb-2">
                     {dictionary.contact.success.title}
                   </h3>
-                  <p className="text-muted-foreground mb-6">
+                  <p className="text-sm sm:text-base text-muted-foreground mb-6">
                     {dictionary.contact.success.description}
                   </p>
                   <Button
@@ -218,7 +218,7 @@ export function Contact() {
               ) : (
                 <form
                   onSubmit={handleSubmit(onSubmit)}
-                  className="p-6 md:p-8 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft space-y-6"
+                  className="p-5 sm:p-6 md:p-8 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft space-y-5 sm:space-y-6"
                 >
                   {/* Error Message */}
                   {submitError && (

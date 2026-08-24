@@ -53,8 +53,17 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
   body {
     @apply bg-background text-foreground transition-colors duration-500 ease-in-out antialiased;
+    overflow-x: hidden;
+    max-width: 100vw;
+    min-height: 100vh;
+    min-height: 100dvh;
   }
 }
 
@@ -84,17 +93,12 @@
   }
 
   .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
+    @apply py-12 sm:py-16 md:py-24 lg:py-32;
   }
 
   .container-padding {
     @apply px-4 sm:px-6 lg:px-8;
   }
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Custom scrollbar */

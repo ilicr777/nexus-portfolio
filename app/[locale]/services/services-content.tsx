@@ -124,12 +124,12 @@ export function ServicesContent() {
             />
           </div>
 
-          <div className="container-padding mx-auto max-w-5xl text-center relative z-10 pt-10 md:pt-20">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-8 leading-tight">
+          <div className="container-padding mx-auto max-w-5xl text-center relative z-10 pt-6 sm:pt-10 md:pt-20">
+            <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter mb-4 sm:mb-8 leading-tight">
               <TextReveal text={dictionary.servicesPage.title} />
             </h1>
             <ScrollReveal delay={0.3}>
-              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light">
+              <p className="text-base sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto font-light">
                 {dictionary.servicesPage.description}
               </p>
             </ScrollReveal>
@@ -137,14 +137,14 @@ export function ServicesContent() {
         </section>
 
         {/* Editorial Services Layout */}
-        <section className="py-20 md:py-32">
-          <div className="container-padding mx-auto max-w-7xl flex flex-col gap-32">
+        <section className="py-14 sm:py-20 md:py-32 overflow-hidden">
+          <div className="container-padding mx-auto max-w-7xl flex flex-col gap-20 sm:gap-32">
             {services.map((service, index) => {
               const isEven = index % 2 !== 0;
               return (
                 <div key={service.id} className="relative w-full group">
                   {/* Giant Background Number */}
-                  <div className={`absolute top-0 ${isEven ? 'right-0 md:right-auto md:left-0' : 'left-0'} -translate-y-1/4 select-none pointer-events-none overflow-hidden`}>
+                  <div className={`hidden sm:block absolute top-0 ${isEven ? 'right-0 md:right-auto md:left-0' : 'left-0'} -translate-y-1/4 select-none pointer-events-none overflow-hidden`}>
                     <motion.span 
                       initial={{ opacity: 0, y: 100 }}
                       whileInView={{ opacity: 0.03, y: 0 }}
@@ -156,28 +156,28 @@ export function ServicesContent() {
                     </motion.span>
                   </div>
 
-                  <div className={`relative z-10 flex flex-col ${isEven ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-12 lg:gap-24`}>
+                  <div className={`relative z-10 flex flex-col ${isEven ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-8 sm:gap-12 lg:gap-24`}>
                     {/* Text Content */}
                     <div className="w-full md:w-1/2">
                       <ScrollReveal direction={isEven ? "left" : "right"}>
-                        <div className="inline-flex items-center gap-3 mb-6">
-                          <div className={`p-4 rounded-2xl bg-gradient-to-br ${service.color} border border-border/50 text-foreground shadow-lg backdrop-blur-md`}>
+                        <div className="inline-flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
+                          <div className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-gradient-to-br ${service.color} border border-border/50 text-foreground shadow-lg backdrop-blur-md shrink-0`}>
                             {service.icon}
                           </div>
-                          <span className="text-sm font-mono tracking-widest text-muted-foreground uppercase">
+                          <span className="text-xs sm:text-sm font-mono tracking-widest text-muted-foreground uppercase">
                             {service.subtitle}
                           </span>
                         </div>
                         
-                        <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 tracking-tight">
                           {service.title}
                         </h2>
                         
-                        <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-10">
+                        <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed mb-6 sm:mb-10 font-light">
                           {service.description}
                         </p>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                           {service.features.map((feature: string, fIndex: number) => (
                             <motion.div 
                               key={feature}
@@ -185,10 +185,10 @@ export function ServicesContent() {
                               whileInView={{ opacity: 1, x: 0 }}
                               viewport={{ once: true }}
                               transition={{ delay: fIndex * 0.1, duration: 0.5 }}
-                              className="flex items-center gap-3 p-4 rounded-xl bg-card/30 border border-border/40 hover:bg-card/80 hover:border-primary/30 transition-all duration-300"
+                              className="flex items-center gap-3 p-3.5 sm:p-4 rounded-xl bg-card/30 border border-border/40 hover:bg-card/80 hover:border-primary/30 transition-all duration-300"
                             >
-                              <CheckCircle2 className="h-5 w-5 text-primary shrink-0" />
-                              <span className="text-sm font-medium">{feature}</span>
+                              <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5 text-primary shrink-0" />
+                              <span className="text-xs sm:text-sm font-medium">{feature}</span>
                             </motion.div>
                           ))}
                         </div>
@@ -196,8 +196,8 @@ export function ServicesContent() {
                     </div>
 
                     {/* Visual Element */}
-                    <div className="w-full md:w-1/2 h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden relative border border-border/20 group-hover:border-border/50 transition-colors duration-700">
-                      <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-40 group-hover:opacity-60 transition-opacity duration-700`} />
+                    <div className="w-full md:w-1/2 h-[260px] sm:h-[360px] md:h-[500px] rounded-2xl sm:rounded-[2rem] overflow-hidden relative border border-border/20 group-hover:border-border/50 transition-colors duration-700">
+                      <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-40 group-hover:opacity-60 transition-opacity duration-700 pointer-events-none`} />
                       <div className="absolute inset-0 backdrop-blur-3xl" />
                       
                       {/* Dynamic Visual Mockup */}

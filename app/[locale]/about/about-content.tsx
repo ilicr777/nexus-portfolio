@@ -66,9 +66,9 @@ export function AboutContent() {
               <ScrollReveal direction="left" delay={0.2}>
                 <div className="relative flex justify-center lg:justify-start">
                   <FloatingElement duration={6} distance={10}>
-                    <div className="relative rounded-[2.5rem] overflow-hidden border border-border/50 bg-card/50 shadow-2xl">
+                    <div className="relative rounded-2xl sm:rounded-[2.5rem] overflow-hidden border border-border/50 bg-card/50 shadow-2xl">
                       {/* Image Container */}
-                      <div className="relative w-72 h-80 md:w-80 md:h-[22rem] lg:w-[26rem] lg:h-[30rem] overflow-hidden bg-background">
+                      <div className="relative w-64 h-72 sm:w-80 sm:h-[22rem] lg:w-[26rem] lg:h-[30rem] overflow-hidden bg-background">
                         <Image
                           src="/profile.jpg"
                           alt={dictionary.about.profileAlt}
@@ -85,21 +85,21 @@ export function AboutContent() {
               </ScrollReveal>
 
               {/* Content */}
-              <div className="space-y-8">
+              <div className="space-y-6 sm:space-y-8">
                 <ScrollReveal delay={0.1}>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/40 bg-card/40 backdrop-blur-xl text-sm font-semibold text-primary/80 uppercase tracking-widest shadow-sm">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 rounded-full border border-border/40 bg-card/40 backdrop-blur-xl text-xs sm:text-sm font-semibold text-primary/80 uppercase tracking-widest shadow-sm">
                     {dictionary.about.label}
                   </div>
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.2}>
-                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[1.1]">
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter leading-[1.15] sm:leading-[1.1]">
                     <TextReveal text={dictionary.about.title} />
                   </h1>
                 </ScrollReveal>
 
                 <ScrollReveal delay={0.3}>
-                  <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed font-light text-balance">
+                  <p className="text-base sm:text-xl md:text-2xl text-muted-foreground leading-relaxed font-light text-balance">
                     {dictionary.about.description}
                   </p>
                 </ScrollReveal>
@@ -109,7 +109,7 @@ export function AboutContent() {
         </section>
 
         {/* Values Cards */}
-        <section className="py-20">
+        <section className="py-14 sm:py-20">
           <div className="container-padding mx-auto max-w-7xl">
             <StaggerContainer className="grid md:grid-cols-3 gap-6 lg:gap-8">
               {Object.entries(dictionary.about.cards).map(([key, card], index) => {
@@ -121,16 +121,16 @@ export function AboutContent() {
 
                 return (
                   <StaggerItem key={key}>
-                    <div className="group relative p-8 md:p-10 rounded-[2rem] border border-border/40 bg-card/40 backdrop-blur-xl transition-all duration-500 hover:border-primary/30 shadow-soft hover:shadow-2xl hover:-translate-y-2 overflow-hidden h-full">
+                    <div className="group relative p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-[2rem] border border-border/40 bg-card/40 backdrop-blur-xl transition-all duration-500 hover:border-primary/30 shadow-soft hover:shadow-2xl hover:-translate-y-2 overflow-hidden h-full">
                       {/* Glow Effect */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index % 3]} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
+                      <div className={`absolute inset-0 bg-gradient-to-br ${gradients[index % 3]} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`} />
                       
                       <div className="relative z-10">
-                        <div className="text-primary/50 text-4xl font-black mb-6 opacity-30 group-hover:opacity-100 transition-opacity">0{index + 1}</div>
-                        <h3 className="text-2xl font-bold mb-4 tracking-tight group-hover:text-primary transition-colors">
+                        <div className="text-primary/50 text-3xl sm:text-4xl font-black mb-4 sm:mb-6 opacity-30 group-hover:opacity-100 transition-opacity">0{index + 1}</div>
+                        <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 tracking-tight group-hover:text-primary transition-colors">
                           {(card as { title: string; description: string }).title}
                         </h3>
-                        <p className="text-muted-foreground leading-relaxed font-light">
+                        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed font-light">
                           {(card as { title: string; description: string }).description}
                         </p>
                       </div>
@@ -146,21 +146,21 @@ export function AboutContent() {
         <JourneyTimeline />
 
         {/* Tech Stack (Bento/Pill Grid) */}
-        <section className="py-32 relative" ref={techRef}>
+        <section className="py-20 sm:py-32 relative" ref={techRef}>
           <div className="absolute inset-0 bg-muted/20 border-t border-border/30" />
           
           <div className="container-padding mx-auto max-w-7xl relative z-10">
             <ScrollReveal>
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-extrabold tracking-tighter mb-6">{dictionary.about.techStack}</h2>
-                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-light">
+              <div className="text-center mb-12 sm:mb-16">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 sm:mb-6">{dictionary.about.techStack}</h2>
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto font-light">
                   Le tecnologie che uso quotidianamente per costruire infrastrutture sicure ed esperienze digitali eccezionali.
                 </p>
               </div>
             </ScrollReveal>
 
             <motion.div
-              className="flex flex-wrap justify-center gap-4 md:gap-6 max-w-5xl mx-auto"
+              className="flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6 max-w-5xl mx-auto"
               initial="hidden"
               animate={isTechInView ? "visible" : "hidden"}
               variants={{
@@ -179,12 +179,12 @@ export function AboutContent() {
                     visible: { opacity: 1, y: 0 },
                   }}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="flex items-center gap-4 px-6 py-4 rounded-2xl border border-border/50 bg-card/50 backdrop-blur-md shadow-sm hover:shadow-xl hover:border-primary/40 hover:bg-card transition-all duration-300 cursor-default group"
+                  className="flex items-center gap-3 sm:gap-4 px-4 py-2.5 sm:px-6 sm:py-4 rounded-xl sm:rounded-2xl border border-border/50 bg-card/50 backdrop-blur-md shadow-sm hover:shadow-xl hover:border-primary/40 hover:bg-card transition-all duration-300 cursor-default group"
                 >
                   <div className="text-muted-foreground group-hover:text-primary transition-colors duration-300">
                     {tech.icon}
                   </div>
-                  <span className="text-lg font-semibold tracking-tight">{tech.name}</span>
+                  <span className="text-sm sm:text-base md:text-lg font-semibold tracking-tight">{tech.name}</span>
                 </motion.div>
               ))}
             </motion.div>

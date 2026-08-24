@@ -115,13 +115,13 @@ export function ProjectsContent() {
 
             {/* macOS Style Pill Filter */}
             <ScrollReveal delay={0.4}>
-              <div className="flex justify-center mb-20">
-                <div className="inline-flex items-center p-1.5 bg-card/40 backdrop-blur-xl border border-border/50 rounded-full shadow-lg relative z-20">
+              <div className="flex justify-center mb-14 sm:mb-20">
+                <div className="flex flex-wrap justify-center gap-1.5 p-1.5 bg-card/40 backdrop-blur-xl border border-border/50 rounded-2xl sm:rounded-full shadow-lg relative z-20 max-w-full">
                   {filters.map((filter) => (
                     <button
                       key={filter.id}
                       onClick={() => setActiveFilter(filter.id)}
-                      className={`relative px-6 py-2.5 text-sm font-medium rounded-full transition-all duration-300 z-10 ${
+                      className={`relative px-4 sm:px-6 py-2 sm:py-2.5 text-xs sm:text-sm font-medium rounded-full transition-all duration-300 z-10 ${
                         activeFilter === filter.id ? "text-primary-foreground" : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
@@ -142,7 +142,7 @@ export function ProjectsContent() {
         </section>
 
         {/* Alternating Showcase Layout */}
-        <section className="container-padding mx-auto max-w-7xl space-y-32 md:space-y-48">
+        <section className="container-padding mx-auto max-w-7xl space-y-20 sm:space-y-32 md:space-y-48 overflow-hidden">
           {projectKeys.map((key, index) => {
             const project = dictionary.projects.items[key];
             const config = projectConfig[key];
@@ -157,15 +157,15 @@ export function ProjectsContent() {
 
             return (
               <ScrollReveal key={key} delay={0.1}>
-                <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-24 items-center`}>
+                <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-8 sm:gap-12 lg:gap-24 items-center`}>
                   
                   {/* Visual Anchor */}
                   <div className="w-full lg:w-1/2 relative group perspective-1000">
-                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-[3rem] transform -rotate-2 scale-105 opacity-50 blur-xl group-hover:opacity-100 group-hover:rotate-0 transition-all duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-2xl sm:rounded-[3rem] transform -rotate-2 scale-105 opacity-50 blur-xl group-hover:opacity-100 group-hover:rotate-0 transition-all duration-700 pointer-events-none" />
                     
-                    <div className="relative aspect-square w-full max-w-[500px] mx-auto rounded-[3rem] border border-border/40 bg-card/20 backdrop-blur-3xl overflow-hidden flex items-center justify-center shadow-2xl group-hover:-translate-y-2 transition-transform duration-700">
+                    <div className="relative aspect-square w-full max-w-[340px] sm:max-w-[420px] md:max-w-[500px] mx-auto rounded-2xl sm:rounded-[3rem] border border-border/40 bg-card/20 backdrop-blur-3xl overflow-hidden flex items-center justify-center shadow-2xl group-hover:-translate-y-2 transition-transform duration-700">
                       {/* Deep Glow inside */}
-                      <div className={`absolute inset-0 opacity-40 blur-[100px] transition-opacity duration-700 group-hover:opacity-60 bg-gradient-to-br ${config.gradient}`} />
+                      <div className={`absolute inset-0 opacity-40 blur-[100px] transition-opacity duration-700 group-hover:opacity-60 bg-gradient-to-br ${config.gradient} pointer-events-none`} />
                       
                       <motion.div 
                         initial={{ scale: 0.8, opacity: 0 }}
@@ -173,28 +173,28 @@ export function ProjectsContent() {
                         transition={{ type: "spring", stiffness: 100, delay: 0.2 }}
                         className="relative z-10"
                       >
-                        <Icon className="w-40 h-40 md:w-56 md:h-56 text-foreground opacity-90 drop-shadow-2xl filter" />
+                        <Icon className="w-28 h-28 sm:w-40 sm:h-40 md:w-56 md:h-56 text-foreground opacity-90 drop-shadow-2xl filter" />
                       </motion.div>
 
                       {/* Status Badge */}
-                      <div className="absolute top-8 right-8 z-20">
-                        <div className="px-4 py-2 rounded-full bg-background/50 backdrop-blur-md border border-white/10 shadow-lg flex items-center gap-2">
+                      <div className="absolute top-4 right-4 sm:top-8 sm:right-8 z-20">
+                        <div className="px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-background/60 backdrop-blur-md border border-white/10 shadow-lg flex items-center gap-1.5 sm:gap-2">
                           {isLive && (
                             <>
-                              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                              <span className="text-xs font-bold text-green-400 tracking-wider">LIVE</span>
+                              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-green-400 animate-pulse" />
+                              <span className="text-[10px] sm:text-xs font-bold text-green-400 tracking-wider">LIVE</span>
                             </>
                           )}
                           {config.status === "coming" && (
                             <>
                               <Clock className="w-3 h-3 text-yellow-400" />
-                              <span className="text-xs font-bold text-yellow-400 tracking-wider">SOON</span>
+                              <span className="text-[10px] sm:text-xs font-bold text-yellow-400 tracking-wider">SOON</span>
                             </>
                           )}
                           {config.status === "code" && (
                             <>
                               <Github className="w-3 h-3 text-cyan-400" />
-                              <span className="text-xs font-bold text-cyan-400 tracking-wider">CODE</span>
+                              <span className="text-[10px] sm:text-xs font-bold text-cyan-400 tracking-wider">CODE</span>
                             </>
                           )}
                         </div>
@@ -204,23 +204,23 @@ export function ProjectsContent() {
 
                   {/* Content Block */}
                   <div className="w-full lg:w-1/2 relative z-10">
-                    <div className="absolute -left-12 -top-20 text-[12rem] font-black text-primary/[0.03] select-none pointer-events-none tracking-tighter">
+                    <div className="hidden sm:block absolute -left-12 -top-20 text-[12rem] font-black text-primary/[0.03] select-none pointer-events-none tracking-tighter overflow-hidden">
                       0{index + 1}
                     </div>
                     
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/60">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tighter mb-4 sm:mb-6 bg-clip-text text-transparent bg-gradient-to-br from-foreground to-foreground/60">
                       {project.title}
                     </h2>
                     
-                    <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed mb-8 max-w-xl text-balance">
+                    <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-light leading-relaxed mb-6 sm:mb-8 max-w-xl text-balance">
                       {project.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-3 mb-10">
+                    <div className="flex flex-wrap gap-2 sm:gap-3 mb-8 sm:mb-10">
                       {project.tags.map((tag: string) => (
                         <span
                           key={tag}
-                          className="px-4 py-1.5 text-sm font-medium rounded-full bg-primary/5 border border-primary/20 text-primary/80 shadow-sm"
+                          className="px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-medium rounded-full bg-primary/5 border border-primary/20 text-primary/80 shadow-sm"
                         >
                           {tag}
                         </span>
@@ -234,23 +234,23 @@ export function ProjectsContent() {
                           variant="outline"
                           size="xl"
                           disabled
-                          className="h-14 px-8 rounded-full gap-2 cursor-not-allowed opacity-50 text-lg"
+                          className="w-full sm:w-auto h-12 sm:h-14 px-6 sm:px-8 rounded-full gap-2 cursor-not-allowed opacity-50 text-base sm:text-lg justify-center"
                         >
                           {config.buttonText}
                         </Button>
                       ) : (
-                        <div className="inline-flex relative group p-[1px] rounded-full overflow-hidden">
+                        <div className="w-full sm:w-auto inline-flex justify-center relative group p-[1px] rounded-full overflow-hidden max-w-xs sm:max-w-none">
                           <span className="absolute inset-[-1000%] animate-[spin_4s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)] opacity-40 group-hover:opacity-100 transition-opacity duration-700" />
                           
                           {isExternal ? (
-                            <a href={config.link!} target="_blank" rel="noopener noreferrer" className="relative h-14 px-8 rounded-full bg-background/95 hover:bg-background text-foreground backdrop-blur-xl border-none shadow-2xl transition-all flex items-center gap-3 text-lg font-medium group/btn">
-                              {config.buttonText}
-                              <ArrowUpRight className="h-5 w-5 text-primary transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                            <a href={config.link!} target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto relative h-12 sm:h-14 px-6 sm:px-8 rounded-full bg-background/95 hover:bg-background text-foreground backdrop-blur-xl border-none shadow-2xl transition-all flex items-center justify-center gap-3 text-base sm:text-lg font-medium group/btn">
+                              <span>{config.buttonText}</span>
+                              <ArrowUpRight className="h-4 w-4 sm:h-5 sm:w-5 text-primary transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                             </a>
                           ) : (
-                            <Link href={`/${locale}${config.link!}`} className="relative h-14 px-8 rounded-full bg-background/95 hover:bg-background text-foreground backdrop-blur-xl border-none shadow-2xl transition-all flex items-center gap-3 text-lg font-medium group/btn">
-                              {config.buttonText}
-                              <ArrowRight className="h-5 w-5 text-primary transition-transform group-hover/btn:translate-x-1" />
+                            <Link href={`/${locale}${config.link!}`} className="w-full sm:w-auto relative h-12 sm:h-14 px-6 sm:px-8 rounded-full bg-background/95 hover:bg-background text-foreground backdrop-blur-xl border-none shadow-2xl transition-all flex items-center justify-center gap-3 text-base sm:text-lg font-medium group/btn">
+                              <span>{config.buttonText}</span>
+                              <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-primary transition-transform group-hover/btn:translate-x-1" />
                             </Link>
                           )}
                         </div>

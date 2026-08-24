@@ -48,26 +48,26 @@ function HighlightCard({ href, icon, title, description, gradient, learnMore, de
     >
       <Link href={href} className="block">
         {/* Glow Effect */}
-        <div className={`absolute -inset-[1px] rounded-2xl bg-gradient-to-br ${gradient} opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-50`} />
+        <div className={`absolute -inset-[1px] rounded-2xl bg-gradient-to-br ${gradient} opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-50 pointer-events-none`} />
         
         {/* Card */}
-        <div className="relative h-full rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md p-8 shadow-soft transition-all duration-300 group-hover:border-primary/40 group-hover:bg-card/90 group-hover:shadow-soft-lg">
+        <div className="relative h-full rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md p-6 sm:p-8 shadow-soft transition-all duration-300 group-hover:border-primary/40 group-hover:bg-card/90 group-hover:shadow-soft-lg">
           {/* Icon */}
-          <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${gradient} mb-6 transition-transform duration-300 group-hover:scale-110`}>
+          <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-gradient-to-br ${gradient} mb-5 sm:mb-6 transition-transform duration-300 group-hover:scale-110`}>
             {icon}
           </div>
           
           {/* Content */}
-          <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-3 group-hover:text-primary transition-colors">
+          <h3 className="text-xl md:text-2xl font-bold tracking-tight mb-2.5 sm:mb-3 group-hover:text-primary transition-colors">
             {title}
           </h3>
-          <p className="text-muted-foreground leading-relaxed mb-6">
+          <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-6">
             {description}
           </p>
           
-          {/* Arrow */}
-          <div className="flex items-center gap-2 text-sm font-medium text-primary">
-            <span className="opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
+          {/* Arrow & Link label */}
+          <div className="flex items-center gap-2 text-sm font-semibold text-primary">
+            <span className="opacity-100 sm:opacity-0 sm:-translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0">
               {learnMore}
             </span>
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -160,32 +160,32 @@ export function Highlights() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-20"
+          className="mt-16 sm:mt-20"
         >
           <Link href={`/${locale}/projects`} className="group block">
-            <div className="relative rounded-3xl border border-border/50 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md shadow-soft p-8 md:p-12 overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
+            <div className="relative rounded-2xl sm:rounded-3xl border border-border/50 bg-gradient-to-br from-card/80 to-card/40 backdrop-blur-md shadow-soft p-6 sm:p-8 md:p-12 overflow-hidden transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
               {/* Background Pattern */}
-              <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-20" />
+              <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-20 pointer-events-none" />
               
               {/* Glow */}
-              <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl transition-opacity duration-500 group-hover:opacity-50" />
+              <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl transition-opacity duration-500 group-hover:opacity-50 pointer-events-none" />
               
-              <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="relative flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8">
                 <div className="text-center md:text-left">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-3 sm:mb-4">
                     <Briefcase className="h-3.5 w-3.5" />
                     {dictionary.highlights?.featured?.badge || "Featured Project"}
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight mb-3">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight mb-2.5 sm:mb-3">
                     {dictionary.highlights?.featured?.title || "CopyCraft AI"}
                   </h3>
-                  <p className="text-muted-foreground max-w-lg">
+                  <p className="text-muted-foreground text-sm sm:text-base max-w-lg">
                     {dictionary.highlights?.featured?.description || "Advanced AI-powered marketing copy generator. Create persuasive content in seconds."}
                   </p>
                 </div>
                 
-                <div className="flex-shrink-0">
-                  <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 group-hover:gap-4">
+                <div className="flex-shrink-0 w-full sm:w-auto">
+                  <div className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 group-hover:gap-4 text-center">
                     {dictionary.highlights?.featured?.cta || "View Demo"}
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>

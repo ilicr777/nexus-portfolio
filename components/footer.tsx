@@ -1,8 +1,9 @@
 "use client";
 
+import * as React from "react";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Github, ArrowUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useDictionary } from "@/components/dictionary-provider";
@@ -17,6 +18,7 @@ export function Footer() {
   const params = useParams();
   const pathname = usePathname();
   const locale = params.locale as string;
+  const [showScrollTop, setShowScrollTop] = React.useState(false);
 
   const isActive = (href: string) =>
     href === `/${locale}` ? pathname === href : pathname.startsWith(href);
@@ -42,6 +44,15 @@ export function Footer() {
     },
   ];
 
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 350);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -49,7 +60,7 @@ export function Footer() {
   return (
     <footer className="relative border-t border-border bg-muted/30">
       {/* Background */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       </div>
 
@@ -135,21 +146,27 @@ export function Footer() {
       </div>
 
       {/* Scroll to Top Button */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="fixed bottom-8 right-8 z-40"
-      >
-        <Button
-          variant="outline"
-          size="icon"
-          onClick={scrollToTop}
-          className="rounded-full shadow-lg hover:shadow-xl hover:shadow-primary/20 bg-background/80 backdrop-blur-sm"
-        >
-          <ArrowUp className="h-5 w-5" />
-          <span className="sr-only">Scroll to top</span>
-        </Button>
-      </motion.div>
+      <AnimatePresence>
+        {showScrollTop && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8, y: 10 }}
+            transition={{ duration: 0.2 }}
+            className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40"
+          >
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={scrollToTop}
+              className="h-10 w-10 sm:h-11 sm:w-11 rounded-full shadow-lg hover:shadow-xl hover:shadow-primary/20 bg-background/90 backdrop-blur-md border-border/80"
+            >
+              <ArrowUp className="h-4 w-4 sm:h-5 sm:w-5" />
+              <span className="sr-only">Scroll to top</span>
+            </Button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </footer>
   );
 }

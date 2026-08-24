@@ -141,23 +141,23 @@ export function Projects() {
                   variants={itemVariants}
                   className="group relative"
                 >
-                  <div className="relative h-full p-8 md:p-10 rounded-[2rem] border border-border/40 bg-card/40 backdrop-blur-xl transition-all duration-500 hover:border-primary/30 shadow-soft hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
+                  <div className="relative h-full p-5 sm:p-7 md:p-10 rounded-2xl sm:rounded-[2rem] border border-border/40 bg-card/40 backdrop-blur-xl transition-all duration-500 hover:border-primary/30 shadow-soft hover:shadow-2xl hover:-translate-y-2 overflow-hidden">
                     {/* Status Badge */}
-                    <div className="absolute top-4 right-4 z-20">
+                    <div className="absolute top-4 right-4 sm:top-6 sm:right-6 z-20">
                       {isLive && (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-full bg-green-500/20 text-green-400 border border-green-500/30">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-full bg-green-500/20 text-green-400 border border-green-500/30 backdrop-blur-md">
                           <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />
                           LIVE
                         </span>
                       )}
                       {config.status === "coming" && (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-full bg-yellow-500/20 text-yellow-400 border border-yellow-500/30">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-full bg-yellow-500/20 text-yellow-400 border border-yellow-500/30 backdrop-blur-md">
                           <Clock className="w-3 h-3" />
                           SOON
                         </span>
                       )}
                       {config.status === "code" && (
-                        <span className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-semibold rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 backdrop-blur-md">
                           <Github className="w-3 h-3" />
                           CODE
                         </span>
@@ -166,46 +166,46 @@ export function Projects() {
 
                     {/* Gradient Background */}
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br ${config.gradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
+                      className={`absolute inset-0 bg-gradient-to-br ${config.gradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none`}
                     />
 
                     {/* Content */}
-                    <div className="relative z-10">
-                      {/* Icon & Title */}
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex items-center gap-4">
-                          <div className={`p-4 rounded-2xl bg-foreground/5 transition-all duration-500 ${config.accent} group-hover:bg-foreground/10`}>
-                            <Icon className="h-7 w-7" />
+                    <div className="relative z-10 flex flex-col h-full justify-between">
+                      <div>
+                        {/* Icon & Title - with pr-20 to never collide with top-right badge */}
+                        <div className="flex items-center gap-3 sm:gap-4 mb-4 pr-20">
+                          <div className={`p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-foreground/5 transition-all duration-500 ${config.accent} group-hover:bg-foreground/10 shrink-0`}>
+                            <Icon className="h-6 w-6 sm:h-7 sm:w-7" />
                           </div>
-                          <h3 className="text-xl md:text-2xl font-bold tracking-tight">{project.title}</h3>
+                          <h3 className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight">{project.title}</h3>
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-muted-foreground text-sm sm:text-base mb-6 leading-relaxed">
+                          {project.description}
+                        </p>
+
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {project.tags.map((tag: string) => (
+                            <span
+                              key={tag}
+                              className="px-2.5 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"
+                            >
+                              {tag}
+                            </span>
+                          ))}
                         </div>
                       </div>
 
-                      {/* Description */}
-                      <p className="text-muted-foreground mb-6 leading-relaxed">
-                        {project.description}
-                      </p>
-
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.tags.map((tag: string) => (
-                          <span
-                            key={tag}
-                            className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
                       {/* Action Button */}
-                      <div className="flex gap-3">
+                      <div className="pt-2">
                         {isDisabled ? (
                           <Button
                             variant="outline"
                             size="sm"
                             disabled
-                            className="gap-2 cursor-not-allowed opacity-50"
+                            className="w-full sm:w-auto gap-2 cursor-not-allowed opacity-50 justify-center"
                           >
                             <ButtonIcon className="h-4 w-4" />
                             {config.buttonText}
@@ -215,7 +215,7 @@ export function Projects() {
                             asChild
                             variant="outline"
                             size="sm"
-                            className="gap-2"
+                            className="w-full sm:w-auto gap-2 justify-center"
                           >
                             <a href={config.link!} target="_blank" rel="noopener noreferrer">
                               <ButtonIcon className="h-4 w-4" />
@@ -227,7 +227,7 @@ export function Projects() {
                             asChild
                             variant="glow"
                             size="sm"
-                            className="gap-2"
+                            className="w-full sm:w-auto gap-2 justify-center"
                           >
                             <Link href={`/${locale}${config.link!}`}>
                               <ButtonIcon className="h-4 w-4" />

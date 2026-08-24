@@ -161,25 +161,25 @@ export function About() {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6"
           >
             {/* Main Card - Large */}
-            <div className="md:col-span-2 lg:col-span-2 p-6 md:p-8 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
+            <div className="md:col-span-2 lg:col-span-2 p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
               <div className="flex flex-col h-full justify-between">
                 <div>
-                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
-                    <span className="text-2xl">🚀</span>
+                  <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 text-primary mb-3 sm:mb-4">
+                    <span className="text-xl sm:text-2xl">🚀</span>
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold mb-3">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2 sm:mb-3">
                     {dictionary.about.cards.approach.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                     {dictionary.about.cards.approach.description}
                   </p>
                 </div>
-                <div className="mt-6 flex flex-wrap gap-2">
+                <div className="mt-5 sm:mt-6 flex flex-wrap gap-2">
                   {["Problem Solver", "Detail-Oriented", "Results-Driven"].map(
                     (tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"
+                        className="px-2.5 py-1 text-xs font-medium rounded-full bg-primary/10 text-primary"
                       >
                         {tag}
                       </span>
@@ -190,47 +190,47 @@ export function About() {
             </div>
 
             {/* Stats Card */}
-            <div className="p-6 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
-                <span className="text-2xl">📊</span>
+            <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
+              <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 text-primary mb-3 sm:mb-4">
+                <span className="text-xl sm:text-2xl">📊</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4">By the Numbers</h3>
-              <div className="space-y-4">
+              <h3 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4">By the Numbers</h3>
+              <div className="space-y-3 sm:space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Projects</span>
-                  <span className="text-2xl font-bold gradient-text">50+</span>
+                  <span className="text-muted-foreground text-sm sm:text-base">Projects</span>
+                  <span className="text-xl sm:text-2xl font-bold gradient-text">50+</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Happy Clients</span>
-                  <span className="text-2xl font-bold gradient-text">40+</span>
+                  <span className="text-muted-foreground text-sm sm:text-base">Happy Clients</span>
+                  <span className="text-xl sm:text-2xl font-bold gradient-text">40+</span>
                 </div>
                 <div className="flex justify-between items-center">
-                  <span className="text-muted-foreground">Coffee Cups</span>
-                  <span className="text-2xl font-bold gradient-text">∞</span>
+                  <span className="text-muted-foreground text-sm sm:text-base">Coffee Cups</span>
+                  <span className="text-xl sm:text-2xl font-bold gradient-text">∞</span>
                 </div>
               </div>
             </div>
 
             {/* Learning Card */}
-            <div className="p-6 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
-                <span className="text-2xl">📚</span>
+            <div className="p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
+              <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 text-primary mb-3 sm:mb-4">
+                <span className="text-xl sm:text-2xl">📚</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">{dictionary.about.cards.learning.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{dictionary.about.cards.learning.title}</h3>
+              <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                 {dictionary.about.cards.learning.description}
               </p>
             </div>
 
             {/* Experience Card */}
-            <div className="md:col-span-2 p-6 rounded-2xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary mb-4">
-                <span className="text-2xl">💼</span>
+            <div className="md:col-span-2 p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-border/50 bg-card/60 backdrop-blur-md shadow-soft transition-all duration-500 hover:border-primary/40 hover:shadow-soft-lg">
+              <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 text-primary mb-3 sm:mb-4">
+                <span className="text-xl sm:text-2xl">💼</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">
                 {dictionary.about.cards.quality.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
                 {dictionary.about.cards.quality.description}
               </p>
             </div>
